@@ -5,7 +5,7 @@
       "app_key": "application.generated.unity.escapethelaifu.exe",
       "launch_type": "url",
       "url": "steam://launch/",
-      "action_manifest_path": "D:\\Users\\Henry.Oli7939\\Documents\\Escape The Laifu\\Assets\\StreamingAssets\\SteamVR\\actions.json",
+      "action_manifest_path": "D:\\Users\\Henry.Oli7939\\Documents\\EscapeTheLaifu\\Assets\\StreamingAssets\\SteamVR\\actions.json",
       "strings": {
         "en_us": {
           "name": "Escape The Laifu [Testing]"
