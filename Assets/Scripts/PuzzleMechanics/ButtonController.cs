@@ -9,10 +9,12 @@ public class ButtonController : MonoBehaviour
     public GameObject triggerObject;
     private void Start()
     {
+        tag = "Button";
+
         if (triggerObject)
         {
-            triggerObject.AddComponent<ButtonListener>();
-            triggerObject.GetComponent<ButtonListener>().parentButton = this;
+            ButtonListener bl = triggerObject.AddComponent<ButtonListener>();
+            bl.parentButton = this;
         }
         else
         {

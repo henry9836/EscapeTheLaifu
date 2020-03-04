@@ -19,7 +19,7 @@ public class ButtonListener : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         //Check layer mask if matches then call trigger
-        if (other.gameObject.layer == triggerLayerMask) {
+        if (other.gameObject.tag == "Button") {
             parentButton.Trigger();
         }
     }
