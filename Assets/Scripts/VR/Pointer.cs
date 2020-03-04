@@ -11,40 +11,33 @@ public class Pointer : MonoBehaviour
     private SteamVR_Behaviour_Pose m_pose = null;
 
 
-    private LayerMask uiLayer;
+    public LayerMask uiLayer;
     private void Awake()
     {
         m_pose = GetComponent<SteamVR_Behaviour_Pose>();
 
     }
 
-    void Start()
-    {
-        uiLayer = LayerMask.NameToLayer("UI");
-    }
-
     void Update()
     {
-
-
         RaycastHit hit;
-        Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, Mathf.Infinity, uiLayer);
-
-        UIButton button = hit.collider.gameObject.GetComponent<UIButton>();
-        if (button)
+        if (Physics.Raycast(transform.position, transform.forward, out hit, Mathf.Infinity))
         {
-            button.boop();
-        }
+            Debug.Log($"I hit {hit.collider.gameObject.name}");
+            if (hit.collider.gameObject.GetComponent<UIButton>())
+            {
+                hit.collider.gameObject.GetComponent<UIButton>().boop();
 
-        if (m_PinchAction.GetState(m_pose.inputSource))
-        {
-            button.hovering = true;
-        }
+                if (m_PinchAction.GetState(m_pose.inputSource))
+                {
+                    hit.collider.gameObject.GetComponent<UIButton>().hovering = true;
+                }
 
-        if (m_PinchAction.GetStateUp(m_pose.inputSource))
-        {
-            SceneManager.LoadScene(1);
+                if (m_PinchAction.GetStateUp(m_pose.inputSource))
+                {
+                    SceneManager.LoadScene(1);
+                }
+            }
         }
-
     }
 }
