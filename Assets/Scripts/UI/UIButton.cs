@@ -45,14 +45,13 @@ public class UIButton : MonoBehaviour
         {
             SceneManager.LoadScene(1);
         }
-        if (Types.other == type)
+        else if (Types.other == type)
         {
             GameObject p = GameObject.FindWithTag("Player");
             p.AddComponent<SphereCollider>();
             p.AddComponent<Rigidbody>();
-            //SceneManager.LoadScene(1);
         }
-        if (Types.exit == type)
+        else if (Types.exit == type)
         {
             Application.Quit();
 
