@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2994842641624489096}
   - component: {fileID: 2994842641624489097}
   - component: {fileID: 2994842641624489099}
+  - component: {fileID: 839399976734355551}
   m_Layer: 0
   m_Name: Key
   m_TagString: Untagged
@@ -134,6 +135,33 @@ SpringJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &839399976734355551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1975352501643749411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e0e39b73fa49e8498bedb88a19b4814, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8248255003415097407}
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  triggerObject: {fileID: 6534226722957661216}
 --- !u!1 &2725545051841914129
 GameObject:
   m_ObjectHideFlags: 0
@@ -147,7 +175,7 @@ GameObject:
   - component: {fileID: 7300537463538894622}
   - component: {fileID: 1818971944269567313}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: BackPlate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -241,6 +269,7 @@ GameObject:
   - component: {fileID: 2994842639994862490}
   - component: {fileID: 2994842639994862491}
   - component: {fileID: 2994842639994862493}
+  - component: {fileID: 2790827529640070692}
   m_Layer: 0
   m_Name: Key
   m_TagString: Untagged
@@ -361,6 +390,33 @@ SpringJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &2790827529640070692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3254802884949279400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e0e39b73fa49e8498bedb88a19b4814, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8248255003415097407}
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  triggerObject: {fileID: 6534226722957661216}
 --- !u!1 &3602410173626027401
 GameObject:
   m_ObjectHideFlags: 0
@@ -375,6 +431,7 @@ GameObject:
   - component: {fileID: 2994842640018329211}
   - component: {fileID: 2994842640018329208}
   - component: {fileID: 2994842640018329210}
+  - component: {fileID: 4561018272306893939}
   m_Layer: 0
   m_Name: Key
   m_TagString: Untagged
@@ -495,6 +552,33 @@ SpringJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &4561018272306893939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3602410173626027401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e0e39b73fa49e8498bedb88a19b4814, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8248255003415097407}
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  triggerObject: {fileID: 6534226722957661216}
 --- !u!1 &4991146222992746537
 GameObject:
   m_ObjectHideFlags: 0
@@ -509,6 +593,7 @@ GameObject:
   - component: {fileID: 2994842641987656221}
   - component: {fileID: 2994842641987656218}
   - component: {fileID: 2994842641987656220}
+  - component: {fileID: 1211321735846611826}
   m_Layer: 0
   m_Name: Key
   m_TagString: Untagged
@@ -629,6 +714,33 @@ SpringJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &1211321735846611826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4991146222992746537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e0e39b73fa49e8498bedb88a19b4814, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8248255003415097407}
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  triggerObject: {fileID: 6534226722957661216}
 --- !u!1 &5631506362727893536
 GameObject:
   m_ObjectHideFlags: 0
@@ -643,6 +755,7 @@ GameObject:
   - component: {fileID: 2994842640812405091}
   - component: {fileID: 2994842640812405088}
   - component: {fileID: 2994842640812405090}
+  - component: {fileID: 26874670660577153}
   m_Layer: 0
   m_Name: Key
   m_TagString: Untagged
@@ -763,6 +876,33 @@ SpringJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &26874670660577153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5631506362727893536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e0e39b73fa49e8498bedb88a19b4814, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8248255003415097407}
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  triggerObject: {fileID: 6534226722957661216}
 --- !u!1 &5811125384187802860
 GameObject:
   m_ObjectHideFlags: 0
@@ -777,6 +917,7 @@ GameObject:
   - component: {fileID: 2994842641664348992}
   - component: {fileID: 2994842641664348993}
   - component: {fileID: 2994842641664348995}
+  - component: {fileID: 4904801130749227687}
   m_Layer: 0
   m_Name: Key
   m_TagString: Untagged
@@ -897,6 +1038,33 @@ SpringJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &4904801130749227687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5811125384187802860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e0e39b73fa49e8498bedb88a19b4814, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8248255003415097407}
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  triggerObject: {fileID: 6534226722957661216}
 --- !u!1 &6478058656036925066
 GameObject:
   m_ObjectHideFlags: 0
@@ -911,6 +1079,7 @@ GameObject:
   - component: {fileID: 2994842640757798701}
   - component: {fileID: 2994842640757798698}
   - component: {fileID: 2994842640757798700}
+  - component: {fileID: 6335099682998117170}
   m_Layer: 0
   m_Name: Key
   m_TagString: Untagged
@@ -1031,6 +1200,33 @@ SpringJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &6335099682998117170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6478058656036925066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e0e39b73fa49e8498bedb88a19b4814, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8248255003415097407}
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  triggerObject: {fileID: 6534226722957661216}
 --- !u!1 &6534226722957661216
 GameObject:
   m_ObjectHideFlags: 0
@@ -1045,7 +1241,7 @@ GameObject:
   - component: {fileID: 8248255003415097407}
   - component: {fileID: 2994842640100861003}
   - component: {fileID: 2994842640100861000}
-  - component: {fileID: 8296172668163245127}
+  - component: {fileID: 8947539870586075042}
   m_Layer: 0
   m_Name: keypad
   m_TagString: Untagged
@@ -1246,7 +1442,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!65 &8296172668163245127
+--- !u!65 &8947539870586075042
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1257,8 +1453,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.040269226, y: 0.012158364, z: 0.053291656}
-  m_Center: {x: 0.00008103875, y: 0.012900763, z: -0.00005322901}
+  m_Size: {x: 0.040269226, y: 0.0035311088, z: 0.053291656}
+  m_Center: {x: 0.00008103875, y: 0.00823448, z: -0.000053229007}
 --- !u!1 &6795518864584985201
 GameObject:
   m_ObjectHideFlags: 0
@@ -1273,6 +1469,7 @@ GameObject:
   - component: {fileID: 2994842640783454246}
   - component: {fileID: 2994842640783454247}
   - component: {fileID: 2994842640783454297}
+  - component: {fileID: 4675206387521999105}
   m_Layer: 0
   m_Name: Key
   m_TagString: Untagged
@@ -1393,6 +1590,33 @@ SpringJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &4675206387521999105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6795518864584985201}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e0e39b73fa49e8498bedb88a19b4814, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8248255003415097407}
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  triggerObject: {fileID: 6534226722957661216}
 --- !u!1 &7540585281543515404
 GameObject:
   m_ObjectHideFlags: 0
@@ -1407,6 +1631,7 @@ GameObject:
   - component: {fileID: 2994842641806546262}
   - component: {fileID: 2994842641806546263}
   - component: {fileID: 2994842641806546249}
+  - component: {fileID: 1342355127734690829}
   m_Layer: 0
   m_Name: Key
   m_TagString: Untagged
@@ -1527,3 +1752,30 @@ SpringJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &1342355127734690829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7540585281543515404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e0e39b73fa49e8498bedb88a19b4814, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8248255003415097407}
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  triggerObject: {fileID: 6534226722957661216}

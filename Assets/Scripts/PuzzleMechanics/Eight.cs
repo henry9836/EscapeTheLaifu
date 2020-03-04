@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Eight : MonoBehaviour
 {
-    private void OnTriggerEnter(Collider other)
+    public void Play()
     {
         GetComponent<AudioSource>().Play();
     }
