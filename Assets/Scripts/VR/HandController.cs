@@ -5,7 +5,7 @@ using Valve.VR;
 
 public class HandController : MonoBehaviour
 {
-
+    public Collider nonTriggerCollider = null;
     public SteamVR_Action_Boolean m_GrabAction = null;
     public SteamVR_Action_Boolean m_PinchAction = null;
     private SteamVR_Behaviour_Pose m_pose = null;
@@ -16,6 +16,8 @@ public class HandController : MonoBehaviour
 
     void Drop()
     {
+        nonTriggerCollider.enabled = true;
+
         //Null
         if (!currentHeldObject)
         {
@@ -39,6 +41,9 @@ public class HandController : MonoBehaviour
 
     void Pickup()
     {
+
+        nonTriggerCollider.enabled = false;
+
         //Find nearest
         currentHeldObject = GetNearestInteractable();
 
