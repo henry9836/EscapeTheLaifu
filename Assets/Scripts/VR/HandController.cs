@@ -16,13 +16,13 @@ public class HandController : MonoBehaviour
 
     void Drop()
     {
-        nonTriggerCollider.enabled = true;
-
         //Null
         if (!currentHeldObject)
         {
             return;
         }
+
+        StartCoroutine(ToggleHandCol());
 
         //Velocity
         Rigidbody targetBody = currentHeldObject.GetComponent<Rigidbody>();
@@ -41,9 +41,6 @@ public class HandController : MonoBehaviour
 
     void Pickup()
     {
-
-        nonTriggerCollider.enabled = false;
-
         //Find nearest
         currentHeldObject = GetNearestInteractable();
 
@@ -53,6 +50,8 @@ public class HandController : MonoBehaviour
             return;
         }
 
+        StartCoroutine(ToggleHandCol());
+
         //already held
         if (currentHeldObject.parentHand)
         {
@@ -60,7 +59,7 @@ public class HandController : MonoBehaviour
         }
 
         //pos
-        currentHeldObject.transform.position = transform.position;
+        //currentHeldObject.transform.position = transform.position;
 
         //attach
         Rigidbody targetBody = currentHeldObject.GetComponent<Rigidbody>();
@@ -125,8 +124,18 @@ public class HandController : MonoBehaviour
             Debug.Log($"{m_pose.inputSource} Trigger Up");
             Drop();
         }
-
-
-
     }
+
+    IEnumerator ToggleHandCol()
+    {
+        //Delay so no glitch if throwing
+        if (!nonTriggerCollider.enabled)
+        {
+            yield return new WaitForSeconds(0.05f);
+        }
+        nonTriggerCollider.enabled = !nonTriggerCollider.enabled;
+
+        yield return null;
+    }
+
 }
