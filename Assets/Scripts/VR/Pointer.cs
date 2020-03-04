@@ -20,12 +20,13 @@ public class Pointer : MonoBehaviour
 
     void Update()
     {
-   
-
         RaycastHit hit;
         if (Physics.Raycast(transform.position, transform.forward, out hit, Mathf.Infinity))
         {
-            Debug.DrawLine(transform.position, hit.point);
+
+            gameObject.GetComponent<LineRenderer>().SetPosition(0, transform.position);
+            gameObject.GetComponent<LineRenderer>().SetPosition(1, hit.point);
+
            
             Debug.Log($"I hit {hit.collider.gameObject.name}");
             if (hit.collider.gameObject.GetComponent<UIButton>())
