@@ -4,8 +4,14 @@ using UnityEngine;
 
 public class lookat : MonoBehaviour
 {
+    private GameObject cam;
+    void Start()
+    {
+        cam = GameObject.FindGameObjectWithTag("MainCamera");
+    }
     void Update()
     {
-        this.transform.eulerAngles = new Vector3(GameObject.Find("Main Camera").transform.eulerAngles.x, GameObject.Find("Main Camera").transform.eulerAngles.y, GameObject.Find("Main Camera").transform.eulerAngles.z);
+        this.transform.LookAt(cam.transform.position);
+        this.transform.Rotate((Vector3.up * 180));
     }
 }
