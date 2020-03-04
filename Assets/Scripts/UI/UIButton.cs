@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+using Valve.VR;
 
 public class UIButton : MonoBehaviour
 {
@@ -9,6 +11,15 @@ public class UIButton : MonoBehaviour
     public Color hoverd;
 
     public bool hovering = false;
+
+    public enum Types
+    { 
+        menu,
+        other,
+        exit,
+    }
+
+    public Types type;
 
     void Update()
     {
@@ -30,6 +41,21 @@ public class UIButton : MonoBehaviour
 
     public void boop()
     {
-        Debug.Log("Push da Button");
+        if (Types.menu == type)
+        {
+            SceneManager.LoadScene(1);
+        }
+        if (Types.other == type)
+        {
+            GameObject p = GameObject.FindWithTag("Player");
+            p.AddComponent<SphereCollider>();
+            p.AddComponent<Rigidbody>();
+            //SceneManager.LoadScene(1);
+        }
+        if (Types.exit == type)
+        {
+            Application.Quit();
+
+        }
     }
 }
