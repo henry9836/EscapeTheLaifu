@@ -8,7 +8,7 @@ public class HandController : MonoBehaviour
     public Collider nonTriggerCollider = null;
     public SteamVR_Action_Boolean m_GrabAction = null;
     public SteamVR_Action_Boolean m_PinchAction = null;
-    private SteamVR_Behaviour_Pose m_pose = null;
+    public SteamVR_Behaviour_Pose m_pose = null;
     private FixedJoint m_joint = null;
 
     private InteractableController currentHeldObject = null;
@@ -35,6 +35,7 @@ public class HandController : MonoBehaviour
         //Reset
 
         currentHeldObject.parentHand = null;
+        currentHeldObject.tmpPose = null;
         currentHeldObject = null;
 
     }
@@ -67,7 +68,7 @@ public class HandController : MonoBehaviour
 
         //set active hand
         currentHeldObject.parentHand = this;
-
+        currentHeldObject.tmpPose = m_pose;
     }
 
     InteractableController GetNearestInteractable()

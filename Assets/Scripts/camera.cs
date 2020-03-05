@@ -1,74 +1,42 @@
-﻿using System.IO;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class camera : MonoBehaviour
 {
-    string pathPrefix = @"file://";
-    string filename = @"gameoverscreen.png";
+    public GameObject poleroid;
+    
+    public float kaCHEZSHHHHHHTime = 1.0f;
 
-    bool IOLOCK = false;
+    private GameObject thePic;
+    private bool picLock = false;
 
-    public void ScreenShot()
+    public void pic()
     {
-        if (!IOLOCK)
+        if (!picLock)
         {
-            StartCoroutine(CaptureScreenShot());
+            Debug.Log("click");
+            thePic = Instantiate(poleroid, this.transform);
+            thePic.gameObject.transform.localPosition += new Vector3(0.0f, -0.8f, 0.0f);
+            thePic.transform.GetComponent<print>().tackpic();
+            StartCoroutine(kaCHEZSHHHHHH());
         }
     }
 
-    private void Start()
+    public IEnumerator kaCHEZSHHHHHH()
     {
-        StartCoroutine(LoadScreenShot());
-    }
+        picLock = true;
 
-    private void FixedUpdate()
-    {
-        if (Input.GetKeyDown(KeyCode.E) && !IOLOCK)
+
+        for (float i = 0; i < 1.0f; i += Time.unscaledDeltaTime * kaCHEZSHHHHHHTime)
         {
-            StartCoroutine(CaptureScreenShot());
+            thePic.transform.position += thePic.transform.forward * Time.deltaTime * kaCHEZSHHHHHHTime * 0.2f;
+            yield return null;
         }
-    }
-
-    IEnumerator CaptureScreenShot()
-    {
-        IOLOCK = true;
-
-        ScreenCapture.CaptureScreenshot("gameoverscreen.png");
-
-        //Wait for IO
-        yield return new WaitForSeconds(1.0f);
-
-        IOLOCK = false;
-        yield return null;
-    }
-
-    IEnumerator LoadScreenShot()
-    {
-        IOLOCK = true;
-
-        string path = "";
-
-#if UNITY_STANDALONE_LINUX
-            path = Directory.GetCurrentDirectory() + "/run_Data/";
-#endif
-
-#if UNITY_STANDALONE_WIN
-        path = Directory.GetCurrentDirectory() + "\\Meteor Storm_Data\\";
-#endif
-
-        string fullFilename = pathPrefix + path + filename;
-
-        //Debug.LogError(fullFilename);
-
-        WWW www = new WWW(fullFilename);
-        Texture2D screenshot = new Texture2D(1920, 1080, TextureFormat.DXT1, false);
-        www.LoadImageIntoTexture(screenshot);
-        GameObject.FindGameObjectWithTag("GAMEOVERSCREEN").GetComponent<MeshRenderer>().material.SetTexture("Texture2D_56079B38", screenshot);
-
-        IOLOCK = false;
-
+        thePic.transform.parent = null;
+        thePic.GetComponent<BoxCollider>().enabled = true;
+        thePic.GetComponent<Rigidbody>().isKinematic = false;
+        picLock = false;
         yield return null;
     }
 
