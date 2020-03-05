@@ -15,10 +15,10 @@ public class camera : MonoBehaviour
     {
         yield return new WaitForSeconds(10.0f);
         GameObject pic =  Instantiate(poleroid, new Vector3(0.0f, 2.0f, 0.0f), Quaternion.identity);
-        pic.transform.GetChild(0).GetChild(0).GetComponent<print>().tackpic();
+        pic.transform.GetComponent<print>().tackpic();
         yield return new WaitForSeconds(10.0f);
         pic = Instantiate(poleroid, new Vector3(0.0f, 2.0f, 0.0f), Quaternion.identity);
-        pic.transform.GetChild(0).GetChild(0).GetComponent<print>().tackpic();
+        pic.transform.GetComponent<print>().tackpic();
     }
 
 
