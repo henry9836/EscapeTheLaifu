@@ -9,32 +9,35 @@ public class camera : MonoBehaviour
     public float kaCHEZSHHHHHHTime = 1.0f;
 
     private GameObject thePic;
-
+    private bool picLock = false;
 
     public void pic()
     {
-        thePic = Instantiate(poleroid, this.transform);
-        thePic.transform.parent = null;
-
-
-
-        thePic.transform.GetComponent<print>().tackpic();
-        StartCoroutine(kaCHEZSHHHHHH());
+        if (!picLock)
+        {
+            Debug.Log("click");
+            thePic = Instantiate(poleroid, this.transform);
+            thePic.gameObject.transform.localPosition += new Vector3(0.0f, -0.8f, 0.0f);
+            thePic.transform.GetComponent<print>().tackpic();
+            StartCoroutine(kaCHEZSHHHHHH());
+        }
     }
 
     public IEnumerator kaCHEZSHHHHHH()
     {
-        Vector3 startpos = thePic.transform.position;
-        Vector3 endpos = startpos + (thePic.transform.forward * 0.1f);
+        picLock = true;
+
 
         for (float i = 0; i < 1.0f; i += Time.unscaledDeltaTime * kaCHEZSHHHHHHTime)
         {
-            thePic.transform.position = Vector3.Lerp(startpos, endpos, i);
+            thePic.transform.position += thePic.transform.forward * Time.deltaTime * kaCHEZSHHHHHHTime * 0.2f;
             yield return null;
         }
-
-        GetComponent<BoxCollider>().enabled = true;
-        GetComponent<Rigidbody>().isKinematic = false;
+        thePic.transform.parent = null;
+        thePic.GetComponent<BoxCollider>().enabled = true;
+        thePic.GetComponent<Rigidbody>().isKinematic = false;
+        picLock = false;
+        yield return null;
     }
 
 }
