@@ -5,21 +5,36 @@ using UnityEngine;
 public class camera : MonoBehaviour
 {
     public GameObject poleroid;
+    
+    public float kaCHEZSHHHHHHTime = 1.0f;
 
-    private void Start()
+    private GameObject thePic;
+
+
+    public void pic()
     {
-        StartCoroutine(pic());
+        thePic = Instantiate(poleroid, this.transform);
+        thePic.transform.parent = null;
+
+
+
+        thePic.transform.GetComponent<print>().tackpic();
+        StartCoroutine(kaCHEZSHHHHHH());
     }
 
-    public IEnumerator pic()
+    public IEnumerator kaCHEZSHHHHHH()
     {
-        yield return new WaitForSeconds(10.0f);
-        GameObject pic =  Instantiate(poleroid, new Vector3(0.0f, 2.0f, 0.0f), Quaternion.identity);
-        pic.transform.GetComponent<print>().tackpic();
-        yield return new WaitForSeconds(10.0f);
-        pic = Instantiate(poleroid, new Vector3(0.0f, 2.0f, 0.0f), Quaternion.identity);
-        pic.transform.GetComponent<print>().tackpic();
-    }
+        Vector3 startpos = thePic.transform.position;
+        Vector3 endpos = startpos + (thePic.transform.forward * 0.1f);
 
+        for (float i = 0; i < 1.0f; i += Time.unscaledDeltaTime * kaCHEZSHHHHHHTime)
+        {
+            thePic.transform.position = Vector3.Lerp(startpos, endpos, i);
+            yield return null;
+        }
+
+        GetComponent<BoxCollider>().enabled = true;
+        GetComponent<Rigidbody>().isKinematic = false;
+    }
 
 }
