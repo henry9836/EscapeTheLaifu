@@ -18,7 +18,14 @@ public class camera : MonoBehaviour
             Debug.Log("click");
             thePic = Instantiate(poleroid, this.transform);
             thePic.gameObject.transform.localPosition += new Vector3(0.0f, -0.8f, 0.0f);
+
+            this.gameObject.transform.GetChild(0).transform.position += new Vector3(500.0f, 0.0f, 0.0f);
+
+
             thePic.transform.GetComponent<print>().tackpic();
+
+            this.gameObject.transform.GetChild(0).transform.position += new Vector3(-500.0f, 0.0f, 0.0f);
+
             StartCoroutine(kaCHEZSHHHHHH());
         }
     }
