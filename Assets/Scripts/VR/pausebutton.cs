@@ -24,7 +24,9 @@ public class pausebutton : MonoBehaviour
         rightControler = GameObject.Find("[CameraRig]").transform.GetChild(1).gameObject;
         tmpPos2 = rightControler.GetComponent<SteamVR_Behaviour_Pose>();
 
-        pauseUI = GameObject.Find("[CameraRig]").transform.GetChild(2).GetChild(0).gameObject;
+        pauseUI = GameObject.Find("pauseUI");
+        pauseUI.SetActive(false);
+
 
         leftControler.GetComponent<Pointer>().enabled = false;
         leftControler.GetComponent<LineRenderer>().enabled = false;
@@ -32,7 +34,6 @@ public class pausebutton : MonoBehaviour
         rightControler.GetComponent<Pointer>().enabled = false;
         rightControler.GetComponent<LineRenderer>().enabled = false;
 
-        pauseUI.SetActive(false);
     }
 
 
