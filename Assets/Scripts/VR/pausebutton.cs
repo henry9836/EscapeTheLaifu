@@ -12,6 +12,7 @@ public class pausebutton : MonoBehaviour
 
     private GameObject leftControler;
     private GameObject rightControler;
+    private GameObject pauseUI;
 
     void Awake()
     {
@@ -22,7 +23,11 @@ public class pausebutton : MonoBehaviour
     {
         leftControler = GameObject.Find("[CameraRig]").transform.GetChild(0).gameObject;
         rightControler = GameObject.Find("[CameraRig]").transform.GetChild(1).gameObject;
+        pauseUI = GameObject.Find("[CameraRig]").transform.GetChild(2).GetChild(0).gameObject;
 
+        leftControler.GetComponent<Pointer>().enabled = false;
+        rightControler.GetComponent<Pointer>().enabled = false;
+        pauseUI.GetComponent<Pointer>().enabled = false;
     }
 
 
@@ -40,8 +45,8 @@ public class pausebutton : MonoBehaviour
                 once = false;
                 leftControler.GetComponent<Pointer>().enabled = true;
                 rightControler.GetComponent<Pointer>().enabled = true;
+                pauseUI.GetComponent<Pointer>().enabled = true;
 
-                //enable UI 
             }
         }
         else 
@@ -51,7 +56,8 @@ public class pausebutton : MonoBehaviour
                 once = true;
                 leftControler.GetComponent<Pointer>().enabled = false;
                 rightControler.GetComponent<Pointer>().enabled = false;
-                //disable UI
+                pauseUI.GetComponent<Pointer>().enabled = false;
+
             }
         }
     }
