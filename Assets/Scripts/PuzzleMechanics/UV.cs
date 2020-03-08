@@ -65,11 +65,11 @@ public class UV : MonoBehaviour
             float coneY = target.x * coneNormals.x + target.y * coneNormals.y + target.z * coneNormals.z - Y0;
             if (coneY < 0)
             {
-                Debug.Log("Outside");
+                //Debug.Log("Outside");
             }
             else if (coneY > distanceOfBeam)
             {
-                Debug.Log("Outside");
+                //Debug.Log("Outside");
             }
 
             float tempX = target.x - lightPosition.x - coneY * coneNormals.x;
