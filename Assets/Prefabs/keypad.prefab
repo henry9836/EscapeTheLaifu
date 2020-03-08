@@ -258,7 +258,7 @@ GameObject:
   - component: {fileID: 2994842641624489099}
   - component: {fileID: 839399976734355551}
   m_Layer: 0
-  m_Name: Key
+  m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -399,6 +399,17 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2994842640461942888}
+        m_MethodName: inputCharacter
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -755,7 +766,7 @@ GameObject:
   - component: {fileID: 2994842639994862493}
   - component: {fileID: 2790827529640070692}
   m_Layer: 0
-  m_Name: Key
+  m_Name: 7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -900,6 +911,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2994842640461942888}
+        m_MethodName: inputCharacter
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 7
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   triggerObject: {fileID: 6438378105510187610}
 --- !u!1 &3602410173626027401
 GameObject:
@@ -917,7 +939,7 @@ GameObject:
   - component: {fileID: 2994842640018329210}
   - component: {fileID: 4561018272306893939}
   m_Layer: 0
-  m_Name: Key
+  m_Name: 6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1058,6 +1080,17 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2994842640461942888}
+        m_MethodName: inputCharacter
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 6
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1282,7 +1315,7 @@ GameObject:
   - component: {fileID: 2994842641987656220}
   - component: {fileID: 1211321735846611826}
   m_Layer: 0
-  m_Name: Key
+  m_Name: 8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1416,13 +1449,24 @@ MonoBehaviour:
   triggerEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5766630095344135261}
-        m_MethodName: Play
+      - m_Target: {fileID: 0}
+        m_MethodName: win
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2994842640461942888}
+        m_MethodName: inputCharacter
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 8
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1444,7 +1488,7 @@ GameObject:
   - component: {fileID: 2994842640812405090}
   - component: {fileID: 26874670660577153}
   m_Layer: 0
-  m_Name: Key
+  m_Name: 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1589,6 +1633,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2994842640461942888}
+        m_MethodName: inputCharacter
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   triggerObject: {fileID: 7514208844906864767}
 --- !u!1 &5811125384187802860
 GameObject:
@@ -1606,7 +1661,7 @@ GameObject:
   - component: {fileID: 2994842641664348995}
   - component: {fileID: 4904801130749227687}
   m_Layer: 0
-  m_Name: Key
+  m_Name: 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1747,6 +1802,17 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2994842640461942888}
+        m_MethodName: inputCharacter
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 4
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1971,7 +2037,7 @@ GameObject:
   - component: {fileID: 2994842640757798700}
   - component: {fileID: 6335099682998117170}
   m_Layer: 0
-  m_Name: Key
+  m_Name: 9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2112,6 +2178,17 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2994842640461942888}
+        m_MethodName: inputCharacter
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 9
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -2333,6 +2410,7 @@ GameObject:
   - component: {fileID: 4797154496395583740}
   - component: {fileID: 2994842640100861003}
   - component: {fileID: 8947539870586075042}
+  - component: {fileID: 2994842640461942888}
   m_Layer: 0
   m_Name: keypad
   m_TagString: Untagged
@@ -2431,6 +2509,26 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.040269226, y: 0.0035311088, z: 0.053291656}
   m_Center: {x: 0.00008103875, y: 0.00823448, z: -0.000053229007}
+--- !u!114 &2994842640461942888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6534226722957661216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8c6a720f354a8c41932a86d2428cb14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  correctCodeResult:
+    m_PersistentCalls:
+      m_Calls: []
+  inncorrectCodeResult:
+    m_PersistentCalls:
+      m_Calls: []
+  code: 1234
+  locked: 1
 --- !u!1 &6795518864584985201
 GameObject:
   m_ObjectHideFlags: 0
@@ -2447,7 +2545,7 @@ GameObject:
   - component: {fileID: 2994842640783454297}
   - component: {fileID: 4675206387521999105}
   m_Layer: 0
-  m_Name: Key
+  m_Name: 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2588,6 +2686,17 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2994842640461942888}
+        m_MethodName: inputCharacter
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 5
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -2812,7 +2921,7 @@ GameObject:
   - component: {fileID: 2994842641806546249}
   - component: {fileID: 1342355127734690829}
   m_Layer: 0
-  m_Name: Key
+  m_Name: 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2946,13 +3055,13 @@ MonoBehaviour:
   triggerEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8106941496483284916}
-        m_MethodName: 
-        m_Mode: 1
+      - m_Target: {fileID: 2994842640461942888}
+        m_MethodName: inputCharacter
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
