@@ -44,7 +44,7 @@ public class KeyCodeController : MonoBehaviour
 
     public void submitInput()
     {
-        if (!locked)
+        if (locked)
         {
             if (currentInput.Length >= code.Length)
             {
