@@ -1476,6 +1476,7 @@ GameObject:
   - component: {fileID: 514242362}
   - component: {fileID: 514242361}
   - component: {fileID: 514242360}
+  - component: {fileID: 514242363}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -1555,6 +1556,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 514242358}
   m_CullTransparentMesh: 0
+--- !u!65 &514242363
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 514242358}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.01, y: 0.67, z: 0.1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &518593452
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1783,7 +1797,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4000013889601590, guid: 4d293c8e162f3874b982baadd71153d2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.514
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d293c8e162f3874b982baadd71153d2, type: 3}
@@ -2875,7 +2889,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPaused: 0
   inputAction:
-    actionPath: /actions/default/in/GrabGrip
+    actionPath: /actions/default/in/InteractUI
     needsReinit: 0
   tmpPos1: {fileID: 0}
   tmpPos2: {fileID: 0}
@@ -3840,7 +3854,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0.259}
+  m_AnchoredPosition: {x: 0, y: 0.2}
   m_SizeDelta: {x: 2, y: 2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1547371088
@@ -4640,6 +4654,40 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1887355487}
   m_PrefabAsset: {fileID: 0}
+--- !u!21 &1908067083
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Sprites/Default
+  m_Shader: {fileID: 10753, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _AlphaTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - PixelSnap: 0
+    - _EnableExternalAlpha: 0
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Flip: {r: 1, g: 1, b: 1, a: 1}
+    - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &1914253049
 PrefabInstance:
   m_ObjectHideFlags: 0

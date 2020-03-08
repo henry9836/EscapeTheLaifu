@@ -27,7 +27,11 @@ public class pausebutton : MonoBehaviour
         pauseUI = GameObject.Find("[CameraRig]").transform.GetChild(2).GetChild(0).gameObject;
 
         leftControler.GetComponent<Pointer>().enabled = false;
+        leftControler.GetComponent<LineRenderer>().enabled = false;
+
         rightControler.GetComponent<Pointer>().enabled = false;
+        rightControler.GetComponent<LineRenderer>().enabled = false;
+
         pauseUI.SetActive(false);
     }
 
@@ -45,7 +49,10 @@ public class pausebutton : MonoBehaviour
             {
                 once = false;
                 leftControler.GetComponent<Pointer>().enabled = true;
+                leftControler.GetComponent<LineRenderer>().enabled = true;
                 rightControler.GetComponent<Pointer>().enabled = true;
+                rightControler.GetComponent<LineRenderer>().enabled = true;
+
                 pauseUI.SetActive(true);
 
             }
@@ -56,7 +63,11 @@ public class pausebutton : MonoBehaviour
             {
                 once = true;
                 leftControler.GetComponent<Pointer>().enabled = false;
+                leftControler.GetComponent<LineRenderer>().enabled = false;
+
                 rightControler.GetComponent<Pointer>().enabled = false;
+                rightControler.GetComponent<LineRenderer>().enabled = false;
+
                 pauseUI.SetActive(false);
 
             }
