@@ -27,7 +27,7 @@ public class pausebutton : MonoBehaviour
 
         leftControler.GetComponent<Pointer>().enabled = false;
         rightControler.GetComponent<Pointer>().enabled = false;
-        pauseUI.GetComponent<Pointer>().enabled = false;
+        pauseUI.SetActive(false);
     }
 
 
@@ -45,7 +45,7 @@ public class pausebutton : MonoBehaviour
                 once = false;
                 leftControler.GetComponent<Pointer>().enabled = true;
                 rightControler.GetComponent<Pointer>().enabled = true;
-                pauseUI.GetComponent<Pointer>().enabled = true;
+                pauseUI.SetActive(true);
 
             }
         }
@@ -56,7 +56,7 @@ public class pausebutton : MonoBehaviour
                 once = true;
                 leftControler.GetComponent<Pointer>().enabled = false;
                 rightControler.GetComponent<Pointer>().enabled = false;
-                pauseUI.GetComponent<Pointer>().enabled = false;
+                pauseUI.SetActive(false);
 
             }
         }
