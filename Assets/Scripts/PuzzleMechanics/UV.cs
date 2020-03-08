@@ -8,7 +8,7 @@ public class UV : MonoBehaviour
     
     class LightBeam
     {
-        public void refresh(Vector3 forwardLightDir, Vector3 lightPosition)
+        public void refresh(Vector3 forwardLightDir, Vector3 lightPosition, LayerMask uvLayer)
         {
             //Get Beam Info
 
@@ -45,16 +45,18 @@ public class UV : MonoBehaviour
                 radius = Vector3.Distance(lightBeamPos, radiusPos);
 
                 //Perform a sphere cast
-                Collider[] cols = Physics.OverlapSphere(lightBeamPos, radius);
+                Collider[] cols = Physics.OverlapSphere(lightBeamPos, radius, uvLayer);
 
                 //If we hit objects
                 for (int j = 0; j < cols.Length; j++)
                 {
-                    Debug.Log($"I HIT [{cols[j].gameObject.name}] WITH AN I OF [{i}]");
+                    Debug.DrawLine(lightPosition, lightBeamPos, Color.yellow);
+                    Debug.DrawLine(lightBeamPos, cols[j].gameObject.transform.position, Color.red);
                     //If the object has a uv object component
                     if (cols[j].gameObject.GetComponent<UVObject>())
                     {
                         //Invoke Glow
+                        cols[j].gameObject.GetComponent<UVObject>().invokeLight();
                     }
                 }
             }
@@ -71,6 +73,7 @@ public class UV : MonoBehaviour
 
     private new static Light light = null;
     private LightBeam lightBeam = new LightBeam();
+    public LayerMask uvLayer;
 
     private void Start()
     {
@@ -79,9 +82,9 @@ public class UV : MonoBehaviour
 
     private void FixedUpdate()
     {
-        lightBeam.refresh(transform.forward, transform.position);
-        Debug.DrawLine(transform.position, lightBeam.beamPos, new Color(0.40f, 0.20f, 0.92f));
-        Debug.DrawLine(transform.position, lightBeam.centerBeamPos, Color.red);
+        lightBeam.refresh(transform.forward, transform.position, uvLayer);
+        //Debug.DrawLine(transform.position, lightBeam.beamPos, new Color(0.40f, 0.20f, 0.92f));
+        //Debug.DrawLine(transform.position, lightBeam.centerBeamPos, Color.red);
         Debug.Log($"Distance {Vector3.Distance(lightBeam.beamPos, lightBeam.centerBeamPos)}");
     }
 }
