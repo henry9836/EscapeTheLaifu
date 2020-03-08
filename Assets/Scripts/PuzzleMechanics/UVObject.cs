@@ -7,7 +7,7 @@ public class UVObject : MonoBehaviour
     public Vector2 glowRange = new Vector2(0.0f, 20000.0f);
     public float exposeTime = 1.0f;
     private float exposeTimer = 0.0f;
-    private static bool inUVLight = false;
+    public bool inUVLight = false;
     private MeshRenderer mr;
  
     public void invokeLight()
