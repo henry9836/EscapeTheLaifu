@@ -33,6 +33,9 @@ public class UVObject : MonoBehaviour
         float glowAmount = Mathf.Lerp(glowRange.x, glowRange.y, (exposeTimer / exposeTime));
         mr.material.SetFloat("Vector1_C091EF9A", glowAmount);
 
+        //Reset inUVLightFlag if object is still in the light then the UV light Component will change bool to true for us
+        inUVLight = false;
+
     }
 
     private void Start()
