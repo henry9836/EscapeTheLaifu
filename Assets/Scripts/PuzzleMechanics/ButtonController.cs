@@ -9,10 +9,9 @@ public class ButtonController : MonoBehaviour
     public UnityEvent firstFrameTriggerEvent;
     public GameObject triggerObject;
     public bool TriggerOnStay = false;
-    public float maxDistanceFromStartPosition = 0.8f;
+    public float maxDistanceFromStartPosition = 0.016f;
 
-    private bool heldDown = false;
-    private bool firstHeldFrame = false;
+    private bool firstHeldFrame = true;
     private Vector3 startPos;
     private void Start()
     {
@@ -33,8 +32,10 @@ public class ButtonController : MonoBehaviour
 
     private void FixedUpdate()
     {
+
         if (Vector3.Distance(transform.position, startPos) > maxDistanceFromStartPosition)
         {
+            
             transform.position = startPos;
         }
 
@@ -43,7 +44,7 @@ public class ButtonController : MonoBehaviour
             //If close enough to our startposition reset bools
             if (Vector3.Distance(transform.position, startPos) < 0.1f)
             {
-                firstHeldFrame = false;
+                firstHeldFrame = true;
             }
         }
 
@@ -51,11 +52,11 @@ public class ButtonController : MonoBehaviour
 
     public void Trigger()
     {
-        heldDown = true;
+        Debug.Log("Trigger Called");
         triggerEvent.Invoke();
         if (TriggerOnStay && firstHeldFrame)
         {
-            firstHeldFrame = true;
+            firstHeldFrame = false;
             firstFrameTriggerEvent.Invoke();
         }
     }

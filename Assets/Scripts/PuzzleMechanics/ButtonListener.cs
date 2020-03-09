@@ -21,7 +21,9 @@ public class ButtonListener : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         //Check layer mask if matches then call trigger
-        if (other.gameObject.tag == "Button") {
+        if (other.gameObject.tag == "Button" || other.gameObject.tag == "HandModel" || other.gameObject.tag == "Interactable")
+        { 
+            Debug.Log("Entered");
             parentButton.Trigger();
         }
     }
@@ -31,8 +33,9 @@ public class ButtonListener : MonoBehaviour
         //Check layer mask if matches then call trigger
         if (TriggerWhenStay)
         {
-            if (other.gameObject.tag == "Button")
+            if (other.gameObject.tag == "Button" || other.gameObject.tag == "HandModel" || other.gameObject.tag == "Interactable")
             {
+                Debug.Log("Staying");
                 parentButton.Trigger();
             }
         }
