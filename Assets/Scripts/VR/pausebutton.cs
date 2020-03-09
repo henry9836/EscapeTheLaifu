@@ -7,33 +7,39 @@ public class pausebutton : MonoBehaviour
 {
     public bool isPaused = false;
     public SteamVR_Action_Boolean inputAction = null;
-    private SteamVR_Behaviour_Pose tmpPose = null;
+    public SteamVR_Behaviour_Pose tmpPos1 = null;
+    public SteamVR_Behaviour_Pose tmpPos2 = null;
     public bool once = true;
 
     private GameObject leftControler;
     private GameObject rightControler;
     private GameObject pauseUI;
 
-    void Awake()
-    {
-        tmpPose = GetComponent<SteamVR_Behaviour_Pose>();
-    }
+
 
     void Start()
     {
         leftControler = GameObject.Find("[CameraRig]").transform.GetChild(0).gameObject;
+        tmpPos1 = leftControler.GetComponent<SteamVR_Behaviour_Pose>();
         rightControler = GameObject.Find("[CameraRig]").transform.GetChild(1).gameObject;
-        pauseUI = GameObject.Find("[CameraRig]").transform.GetChild(2).GetChild(0).gameObject;
+        tmpPos2 = rightControler.GetComponent<SteamVR_Behaviour_Pose>();
+
+        pauseUI = GameObject.Find("pauseUI");
+        pauseUI.SetActive(false);
+
 
         leftControler.GetComponent<Pointer>().enabled = false;
+        leftControler.GetComponent<LineRenderer>().enabled = false;
+
         rightControler.GetComponent<Pointer>().enabled = false;
-        pauseUI.GetComponent<Pointer>().enabled = false;
+        rightControler.GetComponent<LineRenderer>().enabled = false;
+
     }
 
 
     void Update()
     {
-        if (inputAction.GetStateDown(tmpPose.inputSource))
+        if (inputAction.GetStateUp(tmpPos1.inputSource) || inputAction.GetStateUp(tmpPos2.inputSource))
         {
             isPaused = !isPaused;
         }
@@ -44,8 +50,11 @@ public class pausebutton : MonoBehaviour
             {
                 once = false;
                 leftControler.GetComponent<Pointer>().enabled = true;
+                leftControler.GetComponent<LineRenderer>().enabled = true;
                 rightControler.GetComponent<Pointer>().enabled = true;
-                pauseUI.GetComponent<Pointer>().enabled = true;
+                rightControler.GetComponent<LineRenderer>().enabled = true;
+
+                pauseUI.SetActive(true);
 
             }
         }
@@ -55,8 +64,12 @@ public class pausebutton : MonoBehaviour
             {
                 once = true;
                 leftControler.GetComponent<Pointer>().enabled = false;
+                leftControler.GetComponent<LineRenderer>().enabled = false;
+
                 rightControler.GetComponent<Pointer>().enabled = false;
-                pauseUI.GetComponent<Pointer>().enabled = false;
+                rightControler.GetComponent<LineRenderer>().enabled = false;
+
+                pauseUI.SetActive(false);
 
             }
         }
