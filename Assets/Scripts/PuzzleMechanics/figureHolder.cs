@@ -60,42 +60,46 @@ public class figureHolder : MonoBehaviour
         //swith statments are for nerds
         if (oncewin == false)
         {
-            setcolorwin(baselights[slot - 1]);
+            setcolorwin(baselights[slot]);
         }
         else if (state == 2 || state == 1)
         {
-            correct[slot - 1] = true;
-            setcolorloss(baselights[slot - 1]);
+            if (state == 2)
+            {
+                correct[slot] = true;
+            }
+            else
+            {
+                correct[slot] = false;
+            }
+            setcolorloss(baselights[slot]);
         }
         else if (state == 0)
         {
-            correct[slot - 1] = false;
-            setcoloroff(baselights[slot - 1]);
+            correct[slot] = false;
+            setcoloroff(baselights[slot]);
         }
     }
 
     void setcolorwin(GameObject light)
     {
-        for (int i = 0; i < baselights.Count; i++)
-        {
-            baselights[i].GetComponent<MeshRenderer>().material.SetColor("Color_FE39FBE8", acceptColor);
-        }
+
+        light.GetComponent<MeshRenderer>().material.SetColor("Color_FE39FBE8", acceptColor);
+        
     }
 
     void setcolorloss(GameObject light)
     {
-        for (int i = 0; i < baselights.Count; i++)
-        {
-            baselights[i].GetComponent<MeshRenderer>().material.SetColor("Color_FE39FBE8", rejectColor);
-        }
+
+        light.GetComponent<MeshRenderer>().material.SetColor("Color_FE39FBE8", rejectColor);
+        
     }
 
     void setcoloroff(GameObject light)
     {
-        for (int i = 0; i < baselights.Count; i++)
-        {
-            baselights[i].GetComponent<MeshRenderer>().material.SetColor("Color_FE39FBE8", deadColor);
-        }
+
+        light.GetComponent<MeshRenderer>().material.SetColor("Color_FE39FBE8", deadColor);
+        
     }
 
     public void whoop()

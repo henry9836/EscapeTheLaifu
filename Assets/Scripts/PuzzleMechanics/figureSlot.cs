@@ -25,4 +25,10 @@ public class figureSlot : MonoBehaviour
             this.transform.GetComponentInParent<figureHolder>().placed(0, slot); // not figure
         }
     }
+
+    void OnTriggerExit(Collider other)
+    {
+        this.transform.GetComponentInParent<figureHolder>().placed(0, slot); // not figure
+
+    }
 }
