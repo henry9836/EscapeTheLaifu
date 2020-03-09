@@ -58,9 +58,8 @@ public class pausebutton : MonoBehaviour
                 rightControler.GetComponent<LineRenderer>().enabled = true;
 
                 pauseUI.SetActive(true);
-                pauseUI.transform.rotation = cam.transform.rotation;
-                pauseUI.transform.position = cam.transform.position;
-                pauseUI.transform.localPosition += Vector3.forward * 2.0f;
+                pauseUI.transform.position = cam.transform.position + (cam.transform.forward * 2.0f);
+                pauseUI.transform.LookAt(cam.transform.position + (cam.transform.forward * 1000.0f));
 
 
             }
