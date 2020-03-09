@@ -8,10 +8,13 @@ public class ButtonController : MonoBehaviour
     public UnityEvent triggerEvent;
     public GameObject triggerObject;
     public bool TriggerOnStay = false;
+    public float maxDistanceFromStartPosition = 0.8f;
+
+    private Vector3 startPos;
     private void Start()
     {
         tag = "Button";
-
+        startPos = transform.position;
         if (triggerObject)
         {
             ButtonListener bl = triggerObject.AddComponent<ButtonListener>();
@@ -21,6 +24,15 @@ public class ButtonController : MonoBehaviour
         else
         {
             Debug.LogWarning($"No trigger object set on button [{gameObject.name}]");
+        }
+    }
+
+
+    private void FixedUpdate()
+    {
+        if (Vector3.Distance(transform.position, startPos) > maxDistanceFromStartPosition)
+        {
+            transform.position = startPos;
         }
     }
 

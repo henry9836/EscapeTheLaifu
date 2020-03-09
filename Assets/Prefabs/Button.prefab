@@ -40,7 +40,7 @@ SpringJoint:
   m_ConnectedBody: {fileID: 0}
   m_Anchor: {x: 0, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.3484218, y: 0.28742424, z: 0.7285}
+  m_ConnectedAnchor: {x: 0, y: 0.017227119, z: 0}
   serializedVersion: 2
   m_Spring: 500
   m_Damper: 50
@@ -80,6 +80,7 @@ MonoBehaviour:
           m_BoolArgument: 1
         m_CallState: 2
   triggerObject: {fileID: 6982778871387456743}
+  TriggerOnStay: 0
 --- !u!1 &6796692275528403324
 GameObject:
   m_ObjectHideFlags: 0
