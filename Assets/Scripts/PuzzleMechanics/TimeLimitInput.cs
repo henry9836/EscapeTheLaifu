@@ -39,6 +39,7 @@ public class TimeLimitInput : MonoBehaviour
             {
                 keyTwoActive = false;
                 keyOneActive = false;
+                holdActiveTimer = 0.0f;
                 resetActions.Invoke();
             }
 
@@ -46,6 +47,7 @@ public class TimeLimitInput : MonoBehaviour
             {
                 resultActions.Invoke();
                 locked = false;
+                holdActiveTimer = 0.0f;
             }
         }
 
