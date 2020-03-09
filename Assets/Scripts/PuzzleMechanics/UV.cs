@@ -85,6 +85,5 @@ public class UV : MonoBehaviour
         lightBeam.refresh(transform.forward, transform.position, uvLayer);
         //Debug.DrawLine(transform.position, lightBeam.beamPos, new Color(0.40f, 0.20f, 0.92f));
         //Debug.DrawLine(transform.position, lightBeam.centerBeamPos, Color.red);
-        Debug.Log($"Distance {Vector3.Distance(lightBeam.beamPos, lightBeam.centerBeamPos)}");
     }
 }

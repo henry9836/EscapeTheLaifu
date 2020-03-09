@@ -10,6 +10,13 @@ public class camera : MonoBehaviour
 
     private GameObject thePic;
     private bool picLock = false;
+    private GameObject cam;
+
+    void Start()
+    {
+        cam = this.gameObject.transform.GetChild(0).gameObject;
+
+    }
 
     public void pic()
     {
@@ -18,7 +25,12 @@ public class camera : MonoBehaviour
             Debug.Log("click");
             thePic = Instantiate(poleroid, this.transform);
             thePic.gameObject.transform.localPosition += new Vector3(0.0f, -0.8f, 0.0f);
-            thePic.transform.GetComponent<print>().tackpic();
+
+            cam.transform.parent = null;
+            cam.transform.position = transform.position + (Vector3.right * 500.0f);
+
+
+            StartCoroutine(delay());
             StartCoroutine(kaCHEZSHHHHHH());
         }
     }
@@ -38,6 +50,16 @@ public class camera : MonoBehaviour
         thePic.GetComponent<Rigidbody>().isKinematic = false;
         picLock = false;
         yield return null;
+    }
+
+    public IEnumerator delay()
+    {
+        yield return new WaitForSeconds(1.0f);
+        thePic.transform.GetComponent<print>().tackpic();
+        cam.transform.parent = this.gameObject.transform;
+
+        cam.transform.localPosition = new Vector3(0.0f, 0.0f, 0.0f);
+        cam.transform.localRotation = Quaternion.identity;
     }
 
 }

@@ -20,7 +20,7 @@ public class Pointer : MonoBehaviour
     void Update()
     {
         RaycastHit hit;
-        if (Physics.Raycast(transform.position, transform.forward, out hit, Mathf.Infinity))
+        if (Physics.Raycast(transform.position, transform.forward, out hit, Mathf.Infinity, uiLayer))
         {
             gameObject.GetComponent<LineRenderer>().SetPosition(0, transform.position);
             gameObject.GetComponent<LineRenderer>().SetPosition(1, hit.point);
