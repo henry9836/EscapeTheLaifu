@@ -7,6 +7,7 @@ public class ButtonController : MonoBehaviour
 {
     public UnityEvent triggerEvent;
     public GameObject triggerObject;
+    public bool TriggerOnStay = false;
     private void Start()
     {
         tag = "Button";
@@ -14,6 +15,7 @@ public class ButtonController : MonoBehaviour
         if (triggerObject)
         {
             ButtonListener bl = triggerObject.AddComponent<ButtonListener>();
+            bl.TriggerWhenStay = TriggerOnStay;
             bl.parentButton = this;
         }
         else

@@ -7,6 +7,8 @@ public class ButtonListener : MonoBehaviour
     public ButtonController parentButton;
     public LayerMask triggerLayerMask;
 
+    public bool TriggerWhenStay = false;
+
     private void Start()
     {
         if (!GetComponent<BoxCollider>())
@@ -24,5 +26,16 @@ public class ButtonListener : MonoBehaviour
         }
     }
 
+    private void OnTriggerStay(Collider other)
+    {
+        //Check layer mask if matches then call trigger
+        if (TriggerWhenStay)
+        {
+            if (other.gameObject.tag == "Button")
+            {
+                parentButton.Trigger();
+            }
+        }
+    }
 
 }
