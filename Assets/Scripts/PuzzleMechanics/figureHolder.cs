@@ -14,6 +14,10 @@ public class figureHolder : MonoBehaviour
     private bool oncewin = true;
     private bool win = true;
 
+    public Color acceptColor;
+    public Color rejectColor;
+    private Color deadColor = Color.black;
+
 
     void Start()
     {
@@ -71,16 +75,27 @@ public class figureHolder : MonoBehaviour
     }
 
     void setcolorwin(GameObject light)
-    { 
-
+    {
+        for (int i = 0; i < baselights.Count; i++)
+        {
+            baselights[i].GetComponent<MeshRenderer>().material.SetColor("Color_FE39FBE8", acceptColor);
+        }
     }
 
     void setcolorloss(GameObject light)
-    { 
+    {
+        for (int i = 0; i < baselights.Count; i++)
+        {
+            baselights[i].GetComponent<MeshRenderer>().material.SetColor("Color_FE39FBE8", rejectColor);
+        }
     }
 
     void setcoloroff(GameObject light)
-    { 
+    {
+        for (int i = 0; i < baselights.Count; i++)
+        {
+            baselights[i].GetComponent<MeshRenderer>().material.SetColor("Color_FE39FBE8", deadColor);
+        }
     }
 
     public void whoop()
