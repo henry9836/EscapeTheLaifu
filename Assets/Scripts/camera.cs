@@ -24,7 +24,7 @@ public class camera : MonoBehaviour
         {
             Debug.Log("click");
             thePic = Instantiate(poleroid, this.transform);
-            thePic.gameObject.transform.localPosition += new Vector3(0.0f, -0.8f, 0.0f);
+            thePic.gameObject.transform.localPosition += new Vector3(0.0f, 0.35f, 0.0f);
 
             cam.transform.parent = null;
             cam.transform.position = transform.position + (Vector3.right * 500.0f);
@@ -42,7 +42,7 @@ public class camera : MonoBehaviour
 
         for (float i = 0; i < 1.0f; i += Time.unscaledDeltaTime * kaCHEZSHHHHHHTime)
         {
-            thePic.transform.position += thePic.transform.forward * Time.deltaTime * kaCHEZSHHHHHHTime * 0.2f;
+            thePic.transform.position += thePic.transform.right * Time.deltaTime * kaCHEZSHHHHHHTime * 0.2f;
             yield return null;
         }
         thePic.transform.parent = null;
@@ -54,7 +54,7 @@ public class camera : MonoBehaviour
 
     public IEnumerator delay()
     {
-        yield return new WaitForSeconds(1.0f);
+        yield return new WaitForSeconds(0.1f);
         thePic.transform.GetComponent<print>().tackpic();
         cam.transform.parent = this.gameObject.transform;
 
