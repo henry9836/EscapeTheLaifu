@@ -9,7 +9,7 @@ public class figureSlot : MonoBehaviour
 
     void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.tag == "figure")
+        if (other.gameObject.GetComponent<figure>())
         {
             if (other.GetComponent<figure>().fig == correctID)
             {
