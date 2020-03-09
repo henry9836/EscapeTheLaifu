@@ -21,12 +21,18 @@ public class figureHolder : MonoBehaviour
 
     void Start()
     {
-        while (list.Count > 0)
+        for (int i = 0; i < list.Count; i++)
         {
-            int listpos = Random.Range(0, list.Count -1);
-            password.Add(list[listpos]);
-            list.RemoveAt(listpos);
+            figure.Figures temp = list[i];
+            int rand = Random.Range(i, list.Count);
+            list[i] = list[rand];
+            list[rand] = temp;
+            password.Add(list[i]);
+
         }
+
+        list.Clear();
+
 
         for (int i = 0; i < 4; i++)
         {
