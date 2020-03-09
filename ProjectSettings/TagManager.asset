@@ -8,6 +8,7 @@ TagManager:
   - Button
   - Hand
   - GameManager
+  - figure
   layers:
   - Default
   - TransparentFX
