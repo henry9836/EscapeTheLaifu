@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2008429309883485835
+--- !u!1 &7517355917955102959
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,9 +8,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2008429309883485829}
-  - component: {fileID: 2008429309883485834}
-  - component: {fileID: 2008429309883485828}
+  - component: {fileID: 7517355917955102945}
+  - component: {fileID: 7517355917955102958}
+  - component: {fileID: 7517355917955102944}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: GameManager
@@ -18,13 +18,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2008429309883485829
+--- !u!4 &7517355917955102945
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2008429309883485835}
+  m_GameObject: {fileID: 7517355917955102959}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -32,13 +32,13 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2008429309883485834
+--- !u!114 &7517355917955102958
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2008429309883485835}
+  m_GameObject: {fileID: 7517355917955102959}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 547af2716b1f4c44b8e15c52229360e6, type: 3}
@@ -49,13 +49,13 @@ MonoBehaviour:
   timerUI: {fileID: 0}
   fadeouttime: 0.2
   playing: 1
---- !u!114 &2008429309883485828
+--- !u!114 &7517355917955102944
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2008429309883485835}
+  m_GameObject: {fileID: 7517355917955102959}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5dad5a35336c42e44ac34500a8cbb3e9, type: 3}
