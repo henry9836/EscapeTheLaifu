@@ -7,6 +7,10 @@ public class figureHolder : MonoBehaviour
 {
     public List<GameObject> bases = new List<GameObject>();
     public List<GameObject> baselights = new List<GameObject>();
+    public List<GameObject> popOutBlocks = new List<GameObject>();
+    public List<Transform> popOutBlocksPOS = new List<Transform>();
+
+
     private List<figure.Figures> password = new List<figure.Figures>();
     public List<figure.Figures> list = new List<figure.Figures>();
     public List<bool> correct = new List<bool>() {false, false, false, false };
@@ -17,6 +21,8 @@ public class figureHolder : MonoBehaviour
     public Color acceptColor;
     public Color rejectColor;
     private Color deadColor = Color.black;
+
+    public string shadowPassword;
 
 
     void Start()
@@ -111,5 +117,34 @@ public class figureHolder : MonoBehaviour
     public void whoop()
     {
         Debug.Log("winn");
+
+        for (int i = 0; i < 4; i++)
+        {
+            int rand = Random.Range(0, 10);
+            StartCoroutine(blockSlide(popOutBlocks[rand], i));
+            shadowPassword += rand.ToString();
+        }
+
+        StartCoroutine(blockSlide(popOutBlocks[10], 4)); //torch
+
+    }
+
+
+    public IEnumerator blockSlide(GameObject obj, int number)
+    {
+        Vector3 endpos = popOutBlocksPOS[number].position;
+        Vector3 startpos = endpos - (new Vector3(0.0f, 0.0f, 1.0f) * 0.3f);
+
+        GameObject temp =  Instantiate(obj, popOutBlocksPOS[number].position, Quaternion.identity);
+
+
+        for (float i = 0.0f; i < 1.0f; i += Time.deltaTime * 0.25f)
+        {
+            temp.transform.position = Vector3.Lerp(startpos, endpos, i);
+            yield return null;
+        }
+
+        yield return null;
+
     }
 }
