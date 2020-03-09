@@ -13,4 +13,10 @@ public class figure : MonoBehaviour
     }
 
     public Figures fig;
+
+    private void Start()
+    {
+        gameObject.tag = "figure";
+    }
+
 }
