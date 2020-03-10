@@ -4,15 +4,21 @@ using UnityEngine;
 
 public class RFIDReader : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public int readerno;
+
+    void OnTriggerEnter(Collider other)
     {
-        
+        if (other.GetComponent<RFIDcard>())
+        {
+            if (readerno == other.GetComponent<RFIDcard>().cardno)
+            {
+
+            }
+        }
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+
     }
 }
