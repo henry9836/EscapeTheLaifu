@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3797301662224825818}
   - component: {fileID: 5325998046417651692}
   - component: {fileID: 1933511445864905493}
+  - component: {fileID: 4863381252999100909}
   m_Layer: 0
   m_Name: mousepad
   m_TagString: Untagged
@@ -79,3 +80,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &4863381252999100909
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 209945589670989769}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.8977227, y: 0.08243347, z: 4.191234}
+  m_Center: {x: 0, y: 0.041216735, z: 0}

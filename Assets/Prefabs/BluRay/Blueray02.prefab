@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3833426991759371467}
   - component: {fileID: 5635113868296104045}
   - component: {fileID: 3006238689215741856}
+  - component: {fileID: 1595579452267927679}
   m_Layer: 0
   m_Name: Blueray02
   m_TagString: Untagged
@@ -79,3 +80,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &1595579452267927679
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1479367700111388702}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.39808798, y: 0.07647606, z: 0.537436}
+  m_Center: {x: -0.005278133, y: 0.026988592, z: 0}

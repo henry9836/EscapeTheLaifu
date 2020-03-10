@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5390159543863000084}
   - component: {fileID: 2414460677657942583}
   - component: {fileID: 1502466220007257493}
+  - component: {fileID: 7022650620900241246}
   m_Layer: 0
   m_Name: Blanket
   m_TagString: Untagged
@@ -79,3 +80,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &7022650620900241246
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7605262945782236028}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.7859764, y: 1.2502394, z: 2.368613}
+  m_Center: {x: -0.08028287, y: 0.6251197, z: 0.19346637}
