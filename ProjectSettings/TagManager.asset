@@ -9,6 +9,7 @@ TagManager:
   - Hand
   - GameManager
   - figure
+  - HandModel
   layers:
   - Default
   - TransparentFX
@@ -20,8 +21,8 @@ TagManager:
   - 
   - PostProcessing
   - UV
-  - 
-  - 
+  - ButtonCasing
+  - Button
   - 
   - 
   - 
