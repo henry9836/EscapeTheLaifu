@@ -4,14 +4,17 @@ using UnityEngine;
 
 public class RFIDReader : MonoBehaviour
 {
-    public void OnAnimatorIK(int layerIndex)
-    {
-        
-    }
+    public int readerno; 
 
     void OnTriggerEnter(Collider other)
     {
-        
+        if (other.GetComponent<RFIDcard>())
+        {
+            if (other.GetComponent<RFIDcard>().cardno == readerno)
+            { 
+                
+            }
+        }
     }
 
     void Update()
