@@ -19,7 +19,7 @@ public class ButtonController : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         string compareTag = other.tag;
-            
+        Debug.Log(other.name);
         //Check object that hit us is a trigger for action
         if (compareTag == "HandModel" || compareTag == "Interactable")
         {
@@ -30,7 +30,7 @@ public class ButtonController : MonoBehaviour
     private void OnTriggerStay(Collider other)
     {
         string compareTag = other.tag;
-
+        Debug.Log(other.name);
         //Check object that hit us is a trigger for action
         if (compareTag == "HandModel" || compareTag == "Interactable")
         {
@@ -41,7 +41,7 @@ public class ButtonController : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         string compareTag = other.tag;
-
+        Debug.Log(other.name);
         //Check object that hit us is a trigger for action
         if (compareTag == "HandModel" || compareTag == "Interactable")
         {

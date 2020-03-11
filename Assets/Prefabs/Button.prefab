@@ -11,8 +11,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 6.4621444, y: 0.67964655, z: 6.4621444}
-  m_Center: {x: 0, y: 1.1021292, z: 0}
+  m_Size: {x: 6, y: 2, z: 6}
+  m_Center: {x: 0, y: 1.4438148, z: 0}
 --- !u!64 &3934444074964121408
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -192,7 +192,7 @@ GameObject:
   - component: {fileID: 2897578867294443509}
   - component: {fileID: 1804766685680060397}
   - component: {fileID: 8325303532635290861}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
