@@ -5,28 +5,34 @@ using UnityEngine.UI;
 
 public class UIFadeTrigger : MonoBehaviour
 {
-    public Image spriteA;
-    public Image spriteB;
+    public List<Image> spriteA = new List<Image>();
+    public List<Image> spriteB = new List<Image>();
     public float fadeTime = 1.0f;
     public bool testTrigger = false;
 
-    private Color spriteAvisibleColor = new Color(1.0f, 1.0f, 1.0f, 1.0f);
-    private Color spriteAinvisibleColor = new Color(1.0f, 1.0f, 1.0f, 0.0f);
-    private Color spriteBvisibleColor = new Color(1.0f, 1.0f, 1.0f, 1.0f);
-    private Color spriteBinvisibleColor = new Color(1.0f, 1.0f, 1.0f, 0.0f);
+    private Color invisible = new Color(1.0f, 1.0f, 1.0f, 0.0f);
+    private List<Color> spriteAvisibleColor = new List<Color>();
+    private List<Color> spriteAinvisibleColor = new List<Color>();
+    private List<Color> spriteBvisibleColor = new List<Color>();
+    private List<Color> spriteBinvisibleColor = new List<Color>();
 
     private bool spriteBActive = false;
     private float fadeTimer = 0.0f;
 
     private void Start()
     {
-        spriteAvisibleColor = spriteA.color;
-        spriteAinvisibleColor = spriteAvisibleColor * spriteAinvisibleColor;
 
-        spriteBvisibleColor = spriteB.color;
-        spriteBinvisibleColor = spriteBvisibleColor * spriteBinvisibleColor;
+        for (int i = 0; i < spriteA.Count; i++)
+        {
+            spriteAvisibleColor.Add(spriteA[i].color);
+            spriteAinvisibleColor.Add(spriteA[i].color * invisible);
+        }
 
-        //spriteB.color = spriteBinvisibleColor;
+        for (int i = 0; i < spriteB.Count; i++)
+        {
+            spriteBvisibleColor.Add(spriteB[i].color);
+            spriteBinvisibleColor.Add(spriteB[i].color * invisible);
+        }
 
         fadeTimer = fadeTime;
     }
@@ -50,13 +56,27 @@ public class UIFadeTrigger : MonoBehaviour
 
         if (spriteBActive)
         {
-            spriteB.color = Color.Lerp(spriteBinvisibleColor, spriteBvisibleColor, (fadeTimer / fadeTime));
-            spriteA.color = Color.Lerp(spriteAvisibleColor, spriteAinvisibleColor, (fadeTimer / fadeTime));
+            for (int i = 0; i < spriteB.Count; i++)
+            {
+                spriteB[i].color = Color.Lerp(spriteBinvisibleColor[i], spriteBvisibleColor[i], (fadeTimer / fadeTime));
+            }
+
+            for (int i = 0; i < spriteA.Count; i++)
+            {
+                spriteA[i].color = Color.Lerp(spriteAvisibleColor[i], spriteAinvisibleColor[i], (fadeTimer / fadeTime));
+            }
         }
         else
         {
-            spriteA.color = Color.Lerp(spriteAinvisibleColor, spriteAvisibleColor, (fadeTimer / fadeTime));
-            spriteB.color = Color.Lerp(spriteBvisibleColor, spriteBinvisibleColor, (fadeTimer / fadeTime));
+            for (int i = 0; i < spriteB.Count; i++)
+            {
+                spriteB[i].color = Color.Lerp(spriteBvisibleColor[i], spriteBinvisibleColor[i], (fadeTimer / fadeTime));
+            }
+
+            for (int i = 0; i < spriteA.Count; i++)
+            {
+                spriteA[i].color = Color.Lerp(spriteAinvisibleColor[i], spriteAvisibleColor[i], (fadeTimer / fadeTime));
+            }
         }
 
     }
