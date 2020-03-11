@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1777036820058883011}
   - component: {fileID: 5446475901601431354}
   m_Layer: 0
-  m_Name: Keycard
+  m_Name: Keycard2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -58,7 +58,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5561349426305759274, guid: bf35ce8edf9b1114eaa097a83e9087ab, type: 3}
+  - {fileID: 2100000, guid: 5e50420339538344e85632b90bd62c59, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

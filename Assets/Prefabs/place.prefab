@@ -67,7 +67,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -876546973899608171, guid: 8c049aee20a55ac48a22df0c8083da60, type: 3}
+  - {fileID: 2100000, guid: 055b6b5add5c80b4c9587639a6b11e5a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -110,6 +110,8 @@ MonoBehaviour:
   - {fileID: 4241824814262703540}
   - {fileID: 4241824814348266321}
   - {fileID: 4241824814040710965}
+  popOutBlocks: []
+  popOutBlocksPOS: []
   list: 00000000010000000200000003000000
   correct: 00000000
   haswon:
@@ -128,6 +130,7 @@ MonoBehaviour:
         m_CallState: 2
   acceptColor: {r: 0, g: 1, b: 0.0408051, a: 1}
   rejectColor: {r: 1, g: 0, b: 0, a: 1}
+  shadowPassword: 
 --- !u!1 &4241824813183668016
 GameObject:
   m_ObjectHideFlags: 0
