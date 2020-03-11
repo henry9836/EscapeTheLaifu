@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 3287259107180222480}
   - component: {fileID: 6064304105411368390}
   - component: {fileID: 8412605067109785763}
-  - component: {fileID: 2819003841788844272}
   m_Layer: 0
   m_Name: Cylinder
   m_TagString: Untagged
@@ -80,20 +79,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &2819003841788844272
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2483678897151352680}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &3941967386500290853
 GameObject:
   m_ObjectHideFlags: 0
@@ -105,7 +90,6 @@ GameObject:
   - component: {fileID: 7282237051043598626}
   - component: {fileID: 7939278335965615046}
   - component: {fileID: 2742785712858683090}
-  - component: {fileID: 632758916}
   m_Layer: 0
   m_Name: MODEL_KATSUMI002
   m_TagString: Untagged
@@ -174,20 +158,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &632758916
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3941967386500290853}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 8982936534200866083, guid: fc755b017dc4ea646abd03f097bfea60, type: 3}
 --- !u!1 &4649096518282999652
 GameObject:
   m_ObjectHideFlags: 0
@@ -200,6 +170,8 @@ GameObject:
   - component: {fileID: 31506033308992947}
   - component: {fileID: 8506983016057234127}
   - component: {fileID: 5889304135361037041}
+  - component: {fileID: 260057231}
+  - component: {fileID: 260057232}
   m_Layer: 0
   m_Name: pose2
   m_TagString: Interactable
@@ -270,3 +242,29 @@ MonoBehaviour:
     actionPath: 
     needsReinit: 0
   tmpPose: {fileID: 0}
+--- !u!65 &260057231
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4649096518282999652}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.42, y: 3.83, z: 0.69}
+  m_Center: {x: 0, y: 1.84, z: 0}
+--- !u!65 &260057232
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4649096518282999652}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.51, y: 0.2, z: 1.55}
+  m_Center: {x: 0, y: -0.08, z: 0}

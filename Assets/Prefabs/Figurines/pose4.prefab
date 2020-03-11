@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 2270879846907080734}
   - component: {fileID: 9066268513275942465}
   - component: {fileID: 3118435071453102345}
-  - component: {fileID: 1616763863}
   m_Layer: 0
   m_Name: MODEL_KATSUMI004
   m_TagString: Untagged
@@ -80,20 +79,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &1616763863
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 383841565528144981}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -93526165127815274, guid: ba0d2de574955bd49827c6e25542394b, type: 3}
 --- !u!1 &5029017345851413799
 GameObject:
   m_ObjectHideFlags: 0
@@ -105,7 +90,6 @@ GameObject:
   - component: {fileID: 5768816869864592603}
   - component: {fileID: 9119901446755544467}
   - component: {fileID: 5721024028258895281}
-  - component: {fileID: 5647295536359891732}
   m_Layer: 0
   m_Name: Cylinder
   m_TagString: Untagged
@@ -174,20 +158,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &5647295536359891732
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5029017345851413799}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &8014372961730788455
 GameObject:
   m_ObjectHideFlags: 0
@@ -200,6 +170,8 @@ GameObject:
   - component: {fileID: 3480644847501189905}
   - component: {fileID: 8271851656151860098}
   - component: {fileID: 1358111984203579462}
+  - component: {fileID: 1389257639}
+  - component: {fileID: 1389257640}
   m_Layer: 0
   m_Name: pose4
   m_TagString: Interactable
@@ -270,3 +242,29 @@ MonoBehaviour:
     actionPath: 
     needsReinit: 0
   tmpPose: {fileID: 0}
+--- !u!65 &1389257639
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8014372961730788455}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.42, y: 3.83, z: 0.69}
+  m_Center: {x: 0, y: 1.84, z: 0}
+--- !u!65 &1389257640
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8014372961730788455}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.51, y: 0.2, z: 1.55}
+  m_Center: {x: 0, y: -0.08, z: 0}
