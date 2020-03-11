@@ -6,17 +6,21 @@ public class Torch : MonoBehaviour
 {
     public bool toggledon = false;
     public List<GameObject> roofaeralights = new List<GameObject> { }; //0 and 1 or bright 2 and 3 are off
+    public List<GameObject> Roof = new List<GameObject> { }; //0 and 1 or bright 2 and 3 are off
 
-    //public bool test = false;
+    public Material roofon;
+    public Material roofoff;
 
-    //void Update()
-    //{
-    //    if (test == true)
-    //    {
-    //        test = false;
-    //        toggle();
-    //    }
-    //}
+    public bool test = false;
+
+    void Update()
+    {
+        if (test == true)
+        {
+            test = false;
+            toggle();
+        }
+    }
 
 
     public void toggle()
@@ -39,6 +43,11 @@ public class Torch : MonoBehaviour
                     roofaeralights[i].SetActive(false);
                 }
             }
+
+            for (int i = 0; i < Roof.Count; i++)
+            {
+                Roof[i].GetComponent<MeshRenderer>().material = roofoff;
+            }
         }
         else
         {
@@ -53,6 +62,12 @@ public class Torch : MonoBehaviour
                 {
                     roofaeralights[i].SetActive(false);
                 }
+            }
+
+
+            for (int i = 0; i < Roof.Count; i++)
+            {
+                Roof[i].GetComponent<MeshRenderer>().material = roofon;
             }
         }
     }
