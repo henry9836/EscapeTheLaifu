@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class KeyCodeController : MonoBehaviour
+public class KeyCodeControllerV1 : MonoBehaviour
 {
     public UnityEvent correctCodeResult;
     public UnityEvent inncorrectCodeResult;
-    public List<string> codes = new List<string>();
+    public string code = "1234";
     public bool locked = true;
     public bool hasSumbitButton = false;
 
@@ -29,7 +29,7 @@ public class KeyCodeController : MonoBehaviour
         //If we are at length of input check input
         if (!hasSumbitButton)
         {
-            if (currentInput.Length >= 4)
+            if (currentInput.Length >= code.Length)
             {
                 submitInput();
             }
@@ -46,9 +46,7 @@ public class KeyCodeController : MonoBehaviour
     {
         if (locked)
         {
-            
-
-            if (currentInput.Length >= 4)
+            if (currentInput.Length >= code.Length)
             {
                 //correct code
                 if (currentInput == code)
