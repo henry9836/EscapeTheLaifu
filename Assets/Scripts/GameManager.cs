@@ -60,7 +60,7 @@ public class GameManager : MonoBehaviour
     {
         playing = false;
         StartCoroutine(textflash());
-
+        //open door
     }
 
     public IEnumerator textflash()
