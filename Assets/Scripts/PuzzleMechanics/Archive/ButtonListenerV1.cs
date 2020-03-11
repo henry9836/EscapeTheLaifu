@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ButtonListener : MonoBehaviour
+public class ButtonListenerV1 : MonoBehaviour
 {
-    public ButtonController parentButton;
+    public ButtonControllerV1 parentButton;
     public LayerMask triggerLayerMask;
 
     public bool TriggerWhenStay = false;
