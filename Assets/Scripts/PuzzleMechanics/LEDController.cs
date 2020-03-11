@@ -27,7 +27,7 @@ public class LEDController : MonoBehaviour
 
     public void turnGreen()
     {
-        ColorChange(Color.red);
+        ColorChange(Color.green);
     }
 
     public void turnRed()
