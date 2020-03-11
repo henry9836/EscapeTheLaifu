@@ -27,28 +27,48 @@ public class TimeLimitInput : MonoBehaviour
         }
     }
 
+    public void RemoveKey(bool isKeyTwo)
+    {
+        if (isKeyTwo)
+        {
+            keyTwoActive = false;
+        }
+        else
+        {
+            keyOneActive = false;
+        }
+    }
+
     private void FixedUpdate()
     {
         if (locked) {
-            if (keyOneActive || keyTwoActive)
-            {
-                holdActiveTimer += Time.deltaTime;
-            }
+            //if (keyOneActive || keyTwoActive)
+            //{
+            //    holdActiveTimer += Time.deltaTime;
+            //}
 
-            if (holdActiveTimer > holdActiveTime)
-            {
-                keyTwoActive = false;
-                keyOneActive = false;
-                holdActiveTimer = 0.0f;
-                resetActions.Invoke();
-            }
+            //if (holdActiveTimer > holdActiveTime)
+            //{
+            //    keyTwoActive = false;
+            //    keyOneActive = false;
+            //    holdActiveTimer = 0.0f;
+            //    resetActions.Invoke();
+            //}
 
-            else if (keyOneActive && keyTwoActive)
+            //else if (keyOneActive && keyTwoActive)
+            //{
+            //    resultActions.Invoke();
+            //    locked = false;
+            //    holdActiveTimer = 0.0f;
+            //}
+
+            if (keyOneActive && keyTwoActive)
             {
                 resultActions.Invoke();
                 locked = false;
                 holdActiveTimer = 0.0f;
             }
+
         }
 
     }
