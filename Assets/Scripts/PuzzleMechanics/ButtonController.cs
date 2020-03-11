@@ -9,6 +9,8 @@ public class ButtonController : MonoBehaviour
     public UnityEvent firstFrameTriggerEvent;
     public UnityEvent exitFrameTriggerEvent;
 
+    public GameObject indicatorLight;
+
     private void Start()
     {
         tag = "Button";
