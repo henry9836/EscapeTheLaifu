@@ -7,16 +7,16 @@ public class RFIDToaster : MonoBehaviour
     public List<GameObject> RFID = new List<GameObject> { };
     public int nextPop = 0;
 
-    //public bool test = false;
+    public bool test = false;
 
-    //void Update()
-    //{
-    //    if (test == true)
-    //    {
-    //        pop();
-    //        test = false;
-    //    }
-    //}
+    void Update()
+    {
+        if (test == true)
+        {
+            pop();
+            test = false;
+        }
+    }
 
     public void pop()
     {
