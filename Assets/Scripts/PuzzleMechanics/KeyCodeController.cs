@@ -118,7 +118,7 @@ public class KeyCodeController : MonoBehaviour
                             break;
                         }
                 }
-                this.codes[i + 1] = "null";
+                this.codes[i] = "null";
 
 
             }
