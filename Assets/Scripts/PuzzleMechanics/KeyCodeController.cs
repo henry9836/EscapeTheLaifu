@@ -5,6 +5,10 @@ using UnityEngine.Events;
 
 public class KeyCodeController : MonoBehaviour
 {
+    public UnityEvent codeOneEvent;
+    public UnityEvent codeTwoEvent;
+    public UnityEvent codeThreeEvent;
+    public UnityEvent codeFourEvent;
     public UnityEvent correctCodeResult;
     public UnityEvent inncorrectCodeResult;
     public List<string> codes = new List<string>();
@@ -46,15 +50,16 @@ public class KeyCodeController : MonoBehaviour
     {
         if (locked)
         {
-            
-
-            if (currentInput.Length >= 4)
+            for (int i = 0; i < codes.Count; i++)
             {
                 //correct code
-                if (currentInput == code)
+                if (currentInput == codes[i])
                 {
                     locked = false;
                     correctCodeResult.Invoke();
+
+
+
                 }
                 //incorrect code
                 else
@@ -62,6 +67,11 @@ public class KeyCodeController : MonoBehaviour
                     inncorrectCodeResult.Invoke();
                     clearInput();
                 }
+            }
+
+            if (currentInput.Length >= 4)
+            {
+               
             }
             else
             {
