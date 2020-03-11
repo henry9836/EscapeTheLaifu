@@ -5,59 +5,47 @@ using UnityEngine.Events;
 
 public class ButtonController : MonoBehaviour
 {
-    public UnityEvent triggerEvent;
+    public UnityEvent heldTriggerEvent;
     public UnityEvent firstFrameTriggerEvent;
-    public GameObject triggerObject;
-    public bool TriggerOnStay = false;
-    public float maxDistanceFromStartPosition = 0.016f;
+    public UnityEvent exitFrameTriggerEvent;
 
-    private bool firstHeldFrame = true;
-    private Vector3 startPos;
+    public GameObject indicatorLight;
+
     private void Start()
     {
         tag = "Button";
-        startPos = transform.position;
-        if (triggerObject)
-        {
-            ButtonListener bl = triggerObject.AddComponent<ButtonListener>();
-            bl.TriggerWhenStay = TriggerOnStay;
-            bl.parentButton = this;
-        }
-        else
-        {
-            Debug.LogWarning($"No trigger object set on button [{gameObject.name}]");
-        }
     }
 
-
-    private void FixedUpdate()
+    private void OnTriggerEnter(Collider other)
     {
-
-        if (Vector3.Distance(transform.position, startPos) > maxDistanceFromStartPosition)
+        string compareTag = other.tag;
+        Debug.Log(other.name);
+        //Check object that hit us is a trigger for action
+        if (compareTag == "HandModel" || compareTag == "Interactable")
         {
-            
-            transform.position = startPos;
-        }
-
-        if (TriggerOnStay && !firstHeldFrame)
-        {
-            //If close enough to our startposition reset bools
-            if (Vector3.Distance(transform.position, startPos) < 0.1f)
-            {
-                firstHeldFrame = true;
-            }
-        }
-
-    }
-
-    public void Trigger()
-    {
-        Debug.Log("Trigger Called");
-        triggerEvent.Invoke();
-        if (TriggerOnStay && firstHeldFrame)
-        {
-            firstHeldFrame = false;
             firstFrameTriggerEvent.Invoke();
+        }
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        string compareTag = other.tag;
+        Debug.Log(other.name);
+        //Check object that hit us is a trigger for action
+        if (compareTag == "HandModel" || compareTag == "Interactable")
+        {
+            heldTriggerEvent.Invoke();
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        string compareTag = other.tag;
+        Debug.Log(other.name);
+        //Check object that hit us is a trigger for action
+        if (compareTag == "HandModel" || compareTag == "Interactable")
+        {
+            exitFrameTriggerEvent.Invoke();
         }
     }
 

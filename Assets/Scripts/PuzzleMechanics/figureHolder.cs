@@ -93,21 +93,21 @@ public class figureHolder : MonoBehaviour
         }
     }
 
-    void setcolorwin(GameObject light)
+    public void setcolorwin(GameObject light)
     {
 
         light.GetComponent<MeshRenderer>().material.SetColor("Color_FE39FBE8", acceptColor);
         
     }
 
-    void setcolorloss(GameObject light)
+    public void setcolorloss(GameObject light)
     {
 
         light.GetComponent<MeshRenderer>().material.SetColor("Color_FE39FBE8", rejectColor);
         
     }
 
-    void setcoloroff(GameObject light)
+    public void setcoloroff(GameObject light)
     {
 
         light.GetComponent<MeshRenderer>().material.SetColor("Color_FE39FBE8", deadColor);
