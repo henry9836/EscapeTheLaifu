@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: UVObjectWallDeco
+  m_Name: UV4
   m_Shader: {fileID: -6465566751694194690, guid: 65aa3a4756988d64e8caa875e428195b,
     type: 3}
   m_ShaderKeywords: _BLENDMODE_ALPHA _SURFACE_TYPE_TRANSPARENT
@@ -38,7 +38,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - Texture2D_28851679:
-        m_Texture: {fileID: 2800000, guid: a92de036a43ce384f94bbbbfb97e03ea, type: 3}
+        m_Texture: {fileID: 2800000, guid: 9e78a07b51a3d004abc06b5684fa6d4d, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - Texture2D_2B8C645E:
