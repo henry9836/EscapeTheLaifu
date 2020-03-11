@@ -60,7 +60,8 @@ public class GameManager : MonoBehaviour
     {
         playing = false;
         StartCoroutine(textflash());
-
+        //open door
+        Debug.Log("game over");
     }
 
     public IEnumerator textflash()
