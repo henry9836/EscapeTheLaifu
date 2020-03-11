@@ -87,10 +87,12 @@ public class KeyCodeController : MonoBehaviour
             {
                 correctCodeResult.Invoke();
                 foundValidCode = true;
-                switch (i)
+                Debug.Log($"Calling {i+1}");
+                switch (i + 1)
                 {
                     case 1:
                         {
+                            Debug.Log("One CalleD!");
                             codeOneEvent.Invoke();
                             break;
                         }
