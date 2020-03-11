@@ -9,6 +9,8 @@ public class RFIDToaster : MonoBehaviour
 
     public bool test = false;
 
+    private bool oncePop = false;
+
     void Update()
     {
         if (test == true)
