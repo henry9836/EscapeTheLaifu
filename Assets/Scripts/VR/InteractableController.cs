@@ -9,7 +9,8 @@ public class InteractableController : MonoBehaviour
     public enum ObjectType
     {
         GENERIC,
-        CAMERA_POLROID
+        CAMERA_POLROID,
+        TORCH,
     }
 
     public ObjectType type;
@@ -42,6 +43,14 @@ public class InteractableController : MonoBehaviour
                         if (inputAction.GetStateDown(tmpPose.inputSource))
                         {
                             GetComponent<camera>().pic();    
+                        }
+                        break;
+                    }
+                case ObjectType.TORCH:
+                    {
+                        if (inputAction.GetStateDown(tmpPose.inputSource))
+                        {
+                            GetComponent<Torch>().toggle();
                         }
                         break;
                     }
