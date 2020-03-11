@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 5635113868296104045}
   - component: {fileID: 3006238689215741856}
   - component: {fileID: 1595579452267927679}
+  - component: {fileID: 2443884611874994019}
+  - component: {fileID: 6591602089907338379}
   m_Layer: 0
   m_Name: Blueray02
   m_TagString: Untagged
@@ -93,3 +95,37 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.39808798, y: 0.07647606, z: 0.537436}
   m_Center: {x: -0.005278133, y: 0.026988592, z: 0}
+--- !u!54 &2443884611874994019
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1479367700111388702}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &6591602089907338379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1479367700111388702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a8919315234dc146879d7165c3a55cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 0
+  parentHand: {fileID: 0}
+  inputAction:
+    actionPath: 
+    needsReinit: 0
+  tmpPose: {fileID: 0}

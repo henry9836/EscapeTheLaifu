@@ -12,8 +12,13 @@ public class GameManager : MonoBehaviour
     public float maxTime = 120.0f;
     public GameObject timerUI;
     public float fadeouttime = 2.0f;
+    public GameObject door;
 
     public bool playing = true;
+
+    public AudioClip dooropen;
+
+
     void Start()
     {
         timer = maxTime;
@@ -60,6 +65,8 @@ public class GameManager : MonoBehaviour
     {
         playing = false;
         StartCoroutine(textflash());
+        door.GetComponent<AudioSource>().PlayOneShot(dooropen);
+        StartCoroutine(doorslide());
 
     }
 
@@ -91,5 +98,19 @@ public class GameManager : MonoBehaviour
         }
         Debug.Log("load scene");
         SceneManager.LoadScene(0);
+    }
+
+    public IEnumerator doorslide()
+    {
+        Vector3 startpos = door.transform.position;
+        Vector3 endpos = startpos + new Vector3(0.0f, 0.0f, -0.5f);
+        for (float i = 0.0f; i < 1.0f; i += Time.unscaledDeltaTime * 0.3f)
+        {
+            door.transform.position = Vector3.Lerp(startpos, endpos, i);
+            yield return null;
+        }
+
+        yield return null;
+    
     }
 }
