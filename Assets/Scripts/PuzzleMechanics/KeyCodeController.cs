@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class KeyCodeController : MonoBehaviour
 {
@@ -12,10 +13,16 @@ public class KeyCodeController : MonoBehaviour
     public UnityEvent correctCodeResult;
     public UnityEvent inncorrectCodeResult;
     public List<string> codes = new List<string>();
-    public bool locked = true;
-    public bool hasSumbitButton = false;
-
+    public Text textField;
     public string currentInput = "";
+
+    private bool inputLock = false;
+
+
+    private void Start()
+    {
+        clearInput();
+    }
 
     public void inputCharacter(int input)
     {
@@ -24,15 +31,36 @@ public class KeyCodeController : MonoBehaviour
 
     public void inputCharacter(string input)
     {
-        if (locked)
+        if (!inputLock)
         {
             //Add input
             currentInput += input;
-        }
 
-        //If we are at length of input check input
-        if (!hasSumbitButton)
-        {
+            textField.text = "";
+
+            //Update Display
+            for (int i = 1; i < 5; i++)
+            {
+                //Do we have a character at position?
+                if (currentInput.Length >= i)
+                {
+                    //Append to textField
+                    textField.text += currentInput.Substring(i - 1, 1);
+                }
+                //Append _
+                else
+                {
+                    textField.text += "_";
+                }
+
+                //Append Two Spaces if not on final loop
+                if (i <= 3)
+                {
+                    textField.text += "  ";
+                }
+            }
+
+            //If we are at length of input check input
             if (currentInput.Length >= 4)
             {
                 submitInput();
@@ -44,41 +72,95 @@ public class KeyCodeController : MonoBehaviour
     public void clearInput()
     {
         currentInput = "";
+        textField.text = "_  _  _  _";
     }
 
     public void submitInput()
     {
-        if (locked)
+
+        bool foundValidCode = false;
+
+        for (int i = 0; i < codes.Count; i++)
         {
-            for (int i = 0; i < codes.Count; i++)
+            //correct code
+            if (currentInput == codes[i])
             {
-                //correct code
-                if (currentInput == codes[i])
+                correctCodeResult.Invoke();
+                foundValidCode = true;
+                switch (i)
                 {
-                    locked = false;
-                    correctCodeResult.Invoke();
-
-
-
+                    case 1:
+                        {
+                            codeOneEvent.Invoke();
+                            break;
+                        }
+                    case 2:
+                        {
+                            codeTwoEvent.Invoke();
+                            break;
+                        }
+                    case 3:
+                        {
+                            codeThreeEvent.Invoke();
+                            break;
+                        }
+                    case 4:
+                        {
+                            codeFourEvent.Invoke();
+                            break;
+                        }
+                    default:
+                        {
+                            Debug.LogWarning($"No action exists for code element [{i}]");
+                            break;
+                        }
                 }
-                //incorrect code
-                else
-                {
-                    inncorrectCodeResult.Invoke();
-                    clearInput();
-                }
-            }
 
-            if (currentInput.Length >= 4)
-            {
-               
-            }
-            else
-            {
-                inncorrectCodeResult.Invoke();
-                clearInput();
             }
         }
+
+        if (!foundValidCode)
+        {
+            //incorrect code
+            inncorrectCodeResult.Invoke();
+        }
+
+    }
+
+    public void WrongAction()
+    {
+        StartCoroutine(WrongCor());
+    }
+
+    public void ValidAction()
+    {
+        StartCoroutine(CorrectCor());
+    }
+
+    IEnumerator WrongCor()
+    {
+        inputLock = true;
+        for (int i = 0; i < 3; i++)
+        {
+            textField.color = Color.red;
+            yield return new WaitForSeconds(0.2f);
+            textField.color = Color.white;
+            yield return new WaitForSeconds(0.2f);
+        }
+        inputLock = false;
+        clearInput();
+        yield return null;
+    }
+
+    IEnumerator CorrectCor()
+    {
+        inputLock = true;
+        textField.color = Color.green;
+        yield return new WaitForSeconds(1.2f);
+        textField.color = Color.white;
+        inputLock = false;
+        clearInput();
+        yield return null;
     }
 
 
