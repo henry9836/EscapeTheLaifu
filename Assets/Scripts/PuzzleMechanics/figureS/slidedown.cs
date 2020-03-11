@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class slidedown : MonoBehaviour
 {
+    public void henryThisOne()
+    {
+        StartCoroutine(slide());
+    }
 
     public IEnumerator slide()
     {
