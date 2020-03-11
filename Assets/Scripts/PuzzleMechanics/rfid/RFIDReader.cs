@@ -7,6 +7,9 @@ public class RFIDReader : MonoBehaviour
     public int readerno;
     public GameObject theLights;
 
+    public AudioClip win;
+    public AudioClip loss;
+
     private RFIDControler theManager;
     private bool locked = false;
 
@@ -24,6 +27,7 @@ public class RFIDReader : MonoBehaviour
                 if (locked == false)
                 {
                     StartCoroutine(correct());
+                    this.gameObject.GetComponent<AudioSource>().PlayOneShot(win);
                 }
             }
             else
@@ -31,6 +35,7 @@ public class RFIDReader : MonoBehaviour
                 if (locked == false)
                 {
                     StartCoroutine(wrong());
+                    this.gameObject.GetComponent<AudioSource>().PlayOneShot(loss);
                 }
             }
         }
