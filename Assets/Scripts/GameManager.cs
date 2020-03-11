@@ -16,6 +16,8 @@ public class GameManager : MonoBehaviour
 
     public bool playing = true;
 
+    public AudioClip dooropen;
+
 
     void Start()
     {
@@ -63,9 +65,9 @@ public class GameManager : MonoBehaviour
     {
         playing = false;
         StartCoroutine(textflash());
-        //open door
+        door.GetComponent<AudioSource>().PlayOneShot(dooropen);
         StartCoroutine(doorslide());
-        Debug.Log("game over");
+
     }
 
     public IEnumerator textflash()
