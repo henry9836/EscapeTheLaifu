@@ -11,6 +11,9 @@ GameObject:
   - component: {fileID: 8474459420330803893}
   - component: {fileID: 3784308490866775127}
   - component: {fileID: 4035133650638260435}
+  - component: {fileID: 3337221295968679721}
+  - component: {fileID: 4385520272533314191}
+  - component: {fileID: 4329221142050090150}
   m_Layer: 0
   m_Name: Manga0
   m_TagString: Untagged
@@ -79,3 +82,51 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!54 &3337221295968679721
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5519305746785003828}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &4385520272533314191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5519305746785003828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a8919315234dc146879d7165c3a55cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 0
+  parentHand: {fileID: 0}
+  inputAction:
+    actionPath: 
+    needsReinit: 0
+  tmpPose: {fileID: 0}
+--- !u!64 &4329221142050090150
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5519305746785003828}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -2750812467615064948, guid: 21d4e538a972bc44e89c271b5f3109cf, type: 3}
