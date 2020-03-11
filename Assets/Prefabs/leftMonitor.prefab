@@ -131,13 +131,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.10980392, g: 0.10980392, b: 0.10980392, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 12e5865f78455da4291dc121476243af, type: 3}
-  m_Type: 2
+  m_Sprite: {fileID: 21300000, guid: 4eeae70e20f822b4dab46c5f531d35a8, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -403,12 +403,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 5e87ae8d520f11245a935cd672331ef3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: dd1f16381ca447442a20021993aa816b, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -535,6 +535,7 @@ MonoBehaviour:
   spriteA: {fileID: 7944697770822190269}
   spriteB: {fileID: 1498276714609698080}
   fadeTime: 1
+  testTrigger: 0
 --- !u!1 &7537827505223355666
 GameObject:
   m_ObjectHideFlags: 0
