@@ -91,7 +91,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &6121351264065724143
@@ -106,7 +106,6 @@ GameObject:
   - component: {fileID: 2096992599294398467}
   - component: {fileID: 1946185093206228100}
   - component: {fileID: 2773624841088678173}
-  - component: {fileID: 840719809446352987}
   m_Layer: 0
   m_Name: pose3
   m_TagString: Interactable
@@ -177,20 +176,6 @@ MonoBehaviour:
     actionPath: 
     needsReinit: 0
   tmpPose: {fileID: 0}
---- !u!64 &840719809446352987
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6121351264065724143}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
 --- !u!1 &7927002836715882407
 GameObject:
   m_ObjectHideFlags: 0
@@ -202,6 +187,7 @@ GameObject:
   - component: {fileID: 7172341951776301073}
   - component: {fileID: 8480804320778150442}
   - component: {fileID: 3353688959683432031}
+  - component: {fileID: 1275273130}
   m_Layer: 0
   m_Name: MODEL_KATSUMI003
   m_TagString: Untagged
@@ -270,3 +256,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &1275273130
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7927002836715882407}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 3119160851319935107, guid: 0a3accd2696d68f478dd9245aaeea0e2, type: 3}

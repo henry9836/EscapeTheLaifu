@@ -9,10 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2886534301603217480}
+  - component: {fileID: 785080327980523790}
   - component: {fileID: 5242485105932291375}
   - component: {fileID: 219327033631491385}
-  - component: {fileID: 3016301343730207158}
-  - component: {fileID: 785080327980523790}
   m_Layer: 0
   m_Name: pose1
   m_TagString: Interactable
@@ -36,6 +35,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &785080327980523790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2185475621698450011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 263c6ed6d8b37994990574eee0f359e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fig: 0
 --- !u!54 &5242485105932291375
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -70,33 +82,6 @@ MonoBehaviour:
     actionPath: 
     needsReinit: 0
   tmpPose: {fileID: 0}
---- !u!64 &3016301343730207158
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2185475621698450011}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
---- !u!114 &785080327980523790
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2185475621698450011}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 263c6ed6d8b37994990574eee0f359e1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fig: 0
 --- !u!1 &4427946411381537775
 GameObject:
   m_ObjectHideFlags: 0
@@ -188,7 +173,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &6321461927555523265
@@ -202,6 +187,7 @@ GameObject:
   - component: {fileID: 8247700112072400724}
   - component: {fileID: 923729688557958374}
   - component: {fileID: 6681912070958361921}
+  - component: {fileID: 1285479097}
   m_Layer: 0
   m_Name: MODEL_KATSUMI001
   m_TagString: Untagged
@@ -270,3 +256,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &1285479097
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6321461927555523265}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -4751042485774725446, guid: 6897c6914bff5bf45a4333975e3dfcfd, type: 3}
