@@ -125,7 +125,9 @@ public class figureHolder : MonoBehaviour
             shadowPassword += rand.ToString();
         }
 
-        StartCoroutine(blockSlide(popOutBlocks[10], 4)); //torch
+        GameObject.Find("rightMonitor").transform.GetChild(0).GetChild(1).gameObject.GetComponent<KeyCodeController>().codes[2] = shadowPassword;
+        
+        StartCoroutine(blockSlide(popOutBlocks[10], 4)); //platform
 
     }
 

@@ -19,6 +19,7 @@ public class KeyCodeController : MonoBehaviour
     private bool inputLock = false;
 
 
+
     private void Start()
     {
         clearInput();
@@ -117,6 +118,8 @@ public class KeyCodeController : MonoBehaviour
                             break;
                         }
                 }
+                this.codes[i] = "null";
+
 
             }
         }
