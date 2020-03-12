@@ -8,7 +8,11 @@ public class UVObject : MonoBehaviour
     public float exposeTime = 1.0f;
     public float exposeTimer = 0.0f;
     public bool inUVLight = false;
+
+    public bool isPlaneShader = true;
+
     private MeshRenderer mr;
+
  
     public void invokeLight()
     {
@@ -39,8 +43,14 @@ public class UVObject : MonoBehaviour
 
         //Lerp glow based on timer
         float glowAmount = Mathf.Lerp(glowRange.x, glowRange.y, (exposeTimer / exposeTime));
-        mr.material.SetFloat("Vector1_C091EF9A", glowAmount);
-
+        if (!isPlaneShader)
+        {
+            mr.material.SetFloat("Vector1_C091EF9A", glowAmount);
+        }
+        else
+        {
+            mr.material.SetFloat("Vector1_D81A3822", glowAmount);
+        }
         //Reset inUVLightFlag if object is still in the light then the UV light Component will change bool to true for us
         inUVLight = false;
 
