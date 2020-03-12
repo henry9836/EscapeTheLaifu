@@ -93,6 +93,7 @@ GameObject:
   - component: {fileID: 4678432031064215090}
   - component: {fileID: 8831573493828444034}
   - component: {fileID: 3906019156873797384}
+  - component: {fileID: 2139410065451440087}
   m_Layer: 0
   m_Name: BusScheduleDamaged
   m_TagString: Untagged
@@ -107,9 +108,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4311433498274001126}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.017180368, y: 0.79596996, z: 0.21931267}
-  m_LocalScale: {x: 0.0053870003, y: 0.0053870003, z: 0.0053870003}
+  m_LocalScale: {x: 0.0053870007, y: 0.0053870007, z: 0.0053870003}
   m_Children:
   - {fileID: 6029715165233153028}
   - {fileID: 6743006136280401238}
@@ -211,6 +212,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.40121302, y: 49.43917, z: 19.886614}
   m_Center: {x: -0.2006035, y: 28.48294, z: 0}
+--- !u!114 &2139410065451440087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4311433498274001126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6846a24b62b62645bce3ed49d1b9a92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  respawnFloor: -5
 --- !u!1001 &358992936192192049
 PrefabInstance:
   m_ObjectHideFlags: 0
