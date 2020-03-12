@@ -13,6 +13,7 @@ public class UIButton : MonoBehaviour
     public bool hovering = false;
 
     public GameObject credits;
+    public Transform spawnPos;
 
     public enum Types
     { 
@@ -53,7 +54,7 @@ public class UIButton : MonoBehaviour
 
             if (credits)
             {
-                Instantiate(credits, new Vector3(0.0f, -1.2f, 1.3f), Quaternion.identity);
+                Instantiate(credits, spawnPos.position, Quaternion.identity);
             }
             //GameObject p = GameObject.FindWithTag("Player");
             //p.AddComponent<SphereCollider>();
