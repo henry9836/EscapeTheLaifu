@@ -104,6 +104,7 @@ GameObject:
   - component: {fileID: 7358963284714786629}
   - component: {fileID: 7358963284714786635}
   - component: {fileID: 7358963284714786625}
+  - component: {fileID: 6712796136019948172}
   m_Layer: 0
   m_Name: Poloraiod Camera
   m_TagString: Interactable
@@ -190,6 +191,19 @@ MonoBehaviour:
   poleroid: {fileID: 2210582891044143374, guid: 336ae45fa97c28540919f6071cc74b1f,
     type: 3}
   kaCHEZSHHHHHHTime: 1
+--- !u!114 &6712796136019948172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7358963284714786632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6846a24b62b62645bce3ed49d1b9a92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  respawnFloor: -5
 --- !u!1 &7358963285847061073
 GameObject:
   m_ObjectHideFlags: 0
