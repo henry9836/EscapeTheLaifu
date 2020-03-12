@@ -9,7 +9,7 @@ public class figureHolder : MonoBehaviour
     public List<GameObject> baselights = new List<GameObject>();
     public List<GameObject> popOutBlocks = new List<GameObject>();
     public List<Transform> popOutBlocksPOS = new List<Transform>();
-
+    public GameObject rightMonitor;
 
     private List<figure.Figures> password = new List<figure.Figures>();
     public List<figure.Figures> list = new List<figure.Figures>();
@@ -45,6 +45,9 @@ public class figureHolder : MonoBehaviour
             bases[i].GetComponent<figureSlot>().slot = i;
             bases[i].GetComponent<figureSlot>().correctID = password[i];
         }
+
+
+        GameObject.Find("postersCOM").GetComponent<posters>().assign(password);
     }
 
 
@@ -125,7 +128,7 @@ public class figureHolder : MonoBehaviour
             shadowPassword += rand.ToString();
         }
 
-        GameObject.Find("rightMonitor").transform.GetChild(0).GetChild(1).gameObject.GetComponent<KeyCodeController>().codes[2] = shadowPassword;
+        rightMonitor.transform.GetChild(0).GetChild(1).gameObject.GetComponent<KeyCodeController>().codes[2] = shadowPassword;
         
 
     }
