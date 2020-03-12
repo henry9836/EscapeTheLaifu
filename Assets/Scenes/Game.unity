@@ -6374,15 +6374,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1183570528, guid: 4d293c8e162f3874b982baadd71153d2, type: 3}
       propertyPath: backgroundColorHDR.r
-      value: 785404
+      value: 766.9961
       objectReference: {fileID: 0}
     - target: {fileID: 1183570528, guid: 4d293c8e162f3874b982baadd71153d2, type: 3}
       propertyPath: backgroundColorHDR.g
-      value: 785404
+      value: 766.9961
       objectReference: {fileID: 0}
     - target: {fileID: 1183570528, guid: 4d293c8e162f3874b982baadd71153d2, type: 3}
       propertyPath: backgroundColorHDR.b
-      value: 785404
+      value: 766.9961
       objectReference: {fileID: 0}
     - target: {fileID: 1000014254142504, guid: 4d293c8e162f3874b982baadd71153d2, type: 3}
       propertyPath: m_TagString
