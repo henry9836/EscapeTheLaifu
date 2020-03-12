@@ -34636,6 +34636,12 @@ Light:
   m_UseBoundingSphereOverride: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1 &1948589894 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2060552839249958573, guid: 9cfea8a84eb7c6c45ab0aaaafc2f21f8,
+    type: 3}
+  m_PrefabInstance: {fileID: 440066397709977458}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1951175382
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -45430,6 +45436,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5923829543968111892, guid: 3d1f9032efc63604d91b4c1247ddfd54,
         type: 3}
+    - target: {fileID: 1757635805126769636, guid: cadfd09657e540c4897a3ea23610cda9,
+        type: 3}
+      propertyPath: rightMonitor
+      value: 
+      objectReference: {fileID: 1948589894}
     - target: {fileID: 1757635805126769637, guid: cadfd09657e540c4897a3ea23610cda9,
         type: 3}
       propertyPath: m_Name
