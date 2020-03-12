@@ -9,30 +9,26 @@ public class posters : MonoBehaviour
 
     public void assign(List<figure.Figures> password)
     {
+        Debug.Log(password[0]);
         for (int i = 0; i < 4; i++)
         {
-            for (int j = 0; j < 4; j++)
-            {
-                if (completePoster[j].GetComponent<IndividPoster>().waifupic == password[i])
-                {
-                    if (password[i] == figure.Figures.waifu1)
-                    {
-                        completePoster[j].GetComponent<MeshRenderer>().material = CompletePosterMAT[0];
-                    }
-                    if (password[i] == figure.Figures.waifu2)
-                    {
-                        completePoster[j].GetComponent<MeshRenderer>().material = CompletePosterMAT[1];
-                    }
-                    if (password[i] == figure.Figures.waifu3)
-                    {
-                        completePoster[j].GetComponent<MeshRenderer>().material = CompletePosterMAT[2];
-                    }
-                    if (password[i] == figure.Figures.waifu4)
-                    {
-                        completePoster[j].GetComponent<MeshRenderer>().material = CompletePosterMAT[3];
-                    }
-                }
-            } 
+             if (password[i] == figure.Figures.waifu1)
+             {
+                 completePoster[i].GetComponent<MeshRenderer>().material = CompletePosterMAT[0];
+             }
+             else if (password[i] == figure.Figures.waifu2)
+             {
+                 completePoster[i].GetComponent<MeshRenderer>().material = CompletePosterMAT[1];
+             }
+             else if (password[i] == figure.Figures.waifu3)
+             {
+                 completePoster[i].GetComponent<MeshRenderer>().material = CompletePosterMAT[2];
+             }
+             else if (password[i] == figure.Figures.waifu4)
+             {
+                 completePoster[i].GetComponent<MeshRenderer>().material = CompletePosterMAT[3];
+             }
+
         }
     }
 }

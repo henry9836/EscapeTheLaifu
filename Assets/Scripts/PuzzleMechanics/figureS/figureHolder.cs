@@ -47,7 +47,7 @@ public class figureHolder : MonoBehaviour
         }
 
 
-        GameObject.Find("posterHolder").GetComponent<posters>().assign(password);
+        GameObject.Find("postersCOM").GetComponent<posters>().assign(password);
     }
 
 
