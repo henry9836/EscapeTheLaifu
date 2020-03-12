@@ -54,7 +54,7 @@ public class camera : MonoBehaviour
 
     public IEnumerator delay()
     {
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(Time.deltaTime);
         thePic.transform.GetComponent<print>().tackpic();
         cam.transform.parent = this.gameObject.transform;
 
