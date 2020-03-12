@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4362241952833769074}
   - component: {fileID: 501280105964019650}
   - component: {fileID: 5354812318864088904}
+  - component: {fileID: 4697456061339247015}
   m_Layer: 0
   m_Name: BusSchedule
   m_TagString: Untagged
@@ -130,6 +131,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.40121302, y: 49.43917, z: 19.886614}
   m_Center: {x: -0.2006035, y: 28.48294, z: 0}
+--- !u!114 &4697456061339247015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5166089711886119078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6846a24b62b62645bce3ed49d1b9a92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  respawnFloor: -5
 --- !u!1 &8732026570857314702
 GameObject:
   m_ObjectHideFlags: 0

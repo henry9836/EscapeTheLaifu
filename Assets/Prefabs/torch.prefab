@@ -94,6 +94,7 @@ GameObject:
   - component: {fileID: 2534994316004982264}
   - component: {fileID: 4788436658008623660}
   - component: {fileID: 8812005187520536890}
+  - component: {fileID: 3615017280563046472}
   m_Layer: 0
   m_Name: torch
   m_TagString: Interactable
@@ -193,6 +194,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toggledon: 0
+  roofaeralights: []
+  Roof: []
+  roofon: {fileID: 0}
+  roofoff: {fileID: 0}
+  test: 0
 --- !u!114 &4788436658008623660
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -225,6 +231,19 @@ CapsuleCollider:
   m_Height: 0.004384901
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3615017280563046472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8812005187520536869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6846a24b62b62645bce3ed49d1b9a92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  respawnFloor: -5
 --- !u!1 &8812005188736003203
 GameObject:
   m_ObjectHideFlags: 0

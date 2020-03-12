@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 1414141346910034232}
   - component: {fileID: 1414141346910034233}
   - component: {fileID: 1414141346910034243}
+  - component: {fileID: 8205496959361526524}
   m_Layer: 0
   m_Name: Keycard0
   m_TagString: Interactable
@@ -143,3 +144,16 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 5.1035438, y: 0.15284501, z: 10.000002}
   m_Center: {x: 0, y: 0, z: -4.9402046}
+--- !u!114 &8205496959361526524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1414141346910034234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6846a24b62b62645bce3ed49d1b9a92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  respawnFloor: -5

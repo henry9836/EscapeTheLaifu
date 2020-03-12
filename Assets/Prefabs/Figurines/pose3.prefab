@@ -93,6 +93,7 @@ GameObject:
   - component: {fileID: 2773624841088678173}
   - component: {fileID: 1302325398}
   - component: {fileID: 1302325399}
+  - component: {fileID: 316922299924849280}
   m_Layer: 0
   m_Name: pose3
   m_TagString: Interactable
@@ -189,6 +190,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.51, y: 0.2, z: 1.55}
   m_Center: {x: 0, y: -0.08, z: 0}
+--- !u!114 &316922299924849280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6121351264065724143}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6846a24b62b62645bce3ed49d1b9a92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  respawnFloor: -5
 --- !u!1 &7927002836715882407
 GameObject:
   m_ObjectHideFlags: 0
