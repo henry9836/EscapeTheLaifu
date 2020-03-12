@@ -27,7 +27,7 @@ public class camera : MonoBehaviour
             thePic.gameObject.transform.localPosition += new Vector3(0.0f, 0.35f, 0.0f);
 
             cam.transform.parent = null;
-            cam.transform.position = transform.position + (Vector3.right * 500.0f);
+            cam.transform.position = transform.position + (Vector3.right * 5.0f);
 
 
             StartCoroutine(delay());
